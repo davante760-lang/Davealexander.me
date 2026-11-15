@@ -1,22 +1,28 @@
 import { motion } from 'framer-motion'
 import { FadeIn, SectionTitle } from './AnimatedSection'
 
+const storyLinkClass = 'font-medium text-text-primary underline decoration-accent/50 underline-offset-4 transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4 rounded-sm'
+
 const cards = [
   {
-    title: 'Full-Cycle Enterprise Pursuit',
-    body: 'I own the deal from picking the account to signing the paper. About 55% of my pipeline is cold outbound I sourced myself. Long enough in this to know the pipeline you inherit is not the pipeline that gets you to President\u2019s Club.',
+    title: 'Full-Cycle Revenue Ownership',
+    body: 'I’m built for roles that require me to generate pipeline and carry opportunities through close. My experience spans self-sourced outbound, partner introductions, and taking ownership of stalled evaluations.',
+    proof: <>$4–5M in annual qualified pipeline at Samsara, approximately 55% self-sourced; revived and closed <a href="/deals/odom/" className={storyLinkClass}>Odom</a> at Netradyne.</>,
   },
   {
-    title: 'Complex Buying Committees',
-    body: 'Every big deal I\u2019ve closed at Samsara moved through four to six stakeholders over four to six months. Operator, technical evaluator, finance, legal, executive buyer. One champion is a single point of failure. The deal moves when everyone in the room has the same reason for change.',
+    title: 'Competitive Enterprise Replacements',
+    body: 'I’m comfortable selling into accounts with an established vendor and real switching costs. These deals require a compelling business case, support across the buying team, and a practical transition plan.',
+    proof: <>Three Samsara and Lytx displacements totaling $691K ARR at Netradyne: <a href="/deals/odom/" className={storyLinkClass}>Odom</a>, <a href="/deals/texas-transeastern/" className={storyLinkClass}>Texas TransEastern</a>, and <a href="/deals/bjs-logistics/" className={storyLinkClass}>BJ’s</a>.</>,
   },
   {
-    title: 'Selling Into Ops-Heavy Buyers',
-    body: 'The buyers I\u2019ve closed at Samsara run operations that break when the workflow does. Food and beverage plants, construction fleets, emergency services, field ops. What they buy is not software. What they buy is time back, less downtime, and a business case that adds up on paper for the CFO.',
+    title: 'Operational Buyers and Executive Value',
+    body: 'My experience is strongest with products that affect safety, productivity, visibility, and operating costs. I understand how to connect frontline requirements with an investment that leadership can justify.',
+    proof: <><a href="/deals/calfrac/" className={storyLinkClass}>Calfrac’s</a> business case built around customer accident data; <a href="/deals/odom/" className={storyLinkClass}>Odom’s</a> financial justification for a 657-vehicle replacement.</>,
   },
   {
-    title: 'Teams That Actually Talk To Each Other',
-    body: 'I do my best work when Sales, SDR, Marketing, SEs, Product, and Customer Success are talking. I bring field signal back to Product. I stay accountable for the number. Cross-functional is not a buzzword to me. It either works or my number doesn\u2019t land.',
+    title: 'Leading Complex Deals Across Teams',
+    body: 'I’m suited to opportunities that require coordination across sales engineering, partners, finance, legal, and implementation. I’ve worked through changing stakeholders, budget constraints, contract reviews, and rollout requirements to reach a decision.',
+    proof: <><a href="/deals/bjs-logistics/" className={storyLinkClass}>BJ’s</a> four-site rollout planning, <a href="/deals/miami-yellow-cab/" className={storyLinkClass}>Miami’s</a> payment structure, and <a href="/deals/kodiak-building-partners/" className={storyLinkClass}>Kodiak’s</a> changing buying team.</>,
   },
 ]
 
@@ -30,7 +36,7 @@ export default function WhatImBuiltFor() {
 
         <FadeIn delay={0.05}>
           <p className="text-[14.5px] leading-[1.75] text-text-secondary max-w-[680px] mb-8">
-            Four things I keep coming back to when I look at a role.
+            The sales challenges where my experience is most useful.
           </p>
         </FadeIn>
 
@@ -44,6 +50,9 @@ export default function WhatImBuiltFor() {
               >
                 <h3 className="font-heading font-medium text-text-primary mb-2">{card.title}</h3>
                 <p className="text-[14.5px] leading-[1.75] text-text-secondary">{card.body}</p>
+                <p className="mt-4 border-t border-border pt-3 text-[13px] leading-[1.75] text-text-secondary">
+                  <span className="font-medium text-accent">Proof: </span>{card.proof}
+                </p>
               </motion.div>
             </FadeIn>
           ))}
