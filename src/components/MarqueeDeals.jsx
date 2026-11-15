@@ -11,12 +11,12 @@ function DealSection({ id, title, description, deals, className = 'py-24 md:py-2
         </FadeIn>
 
         <FadeIn delay={0.05}>
-          <p className="text-[14.5px] leading-[1.75] text-text-secondary max-w-[680px] mb-8">
+          <p className="text-[16.5px] leading-[1.75] text-text-secondary max-w-[680px] mb-8">
             {description}
           </p>
         </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {deals.map((deal, index) => {
             const Card = deal.href ? motion.a : motion.article
             return (
@@ -38,29 +38,29 @@ function DealSection({ id, title, description, deals, className = 'py-24 md:py-2
                       loading="lazy"
                     />
                   ) : (
-                    <span aria-hidden="true" className="font-heading text-[22px] font-semibold leading-tight tracking-[-0.02em] text-text-primary text-center">
+                    <span aria-hidden="true" className="font-heading text-[24px] font-semibold leading-tight tracking-[-0.02em] text-text-primary text-center">
                       {deal.name}
                     </span>
                   )}
                 </div>
-                <h3 className="font-heading text-[15px] font-semibold text-text-primary tracking-[-0.01em] mb-1.5">
+                <h3 className="font-heading text-[17px] font-semibold text-text-primary tracking-[-0.01em] mb-1.5">
                   {deal.name}
                 </h3>
-                <p className="text-[12.5px] leading-[1.6] text-text-tertiary mb-4">{deal.industry}</p>
-                <div className="mt-auto pt-4 border-t border-border-light flex items-center justify-between gap-3">
+                <p className="text-[14px] leading-[1.6] text-text-tertiary mb-4">{deal.industry}</p>
+                <div className="mt-auto pt-4 border-t border-border-light flex flex-wrap items-center justify-between gap-3">
                   <div className="shrink-0">
-                    <span className="font-heading text-[21px] font-semibold tracking-[-0.03em] text-accent">{deal.value}</span>
-                    {deal.valueLabel && <span className="block text-[10px] uppercase tracking-[0.12em] text-text-tertiary mt-0.5">{deal.valueLabel}</span>}
+                    <span className="font-heading text-[23px] font-semibold tracking-[-0.03em] text-accent">{deal.value}</span>
+                    {deal.valueLabel && <span className="block text-[12px] uppercase tracking-[0.12em] text-text-tertiary mt-0.5">{deal.valueLabel}</span>}
                   </div>
-                  <div className="flex flex-col items-end gap-1.5 max-w-[126px] text-right">
-                    <span className="text-[10px] leading-[1.5] text-text-tertiary">{deal.cycle}</span>
-                    <span className="text-[9px] uppercase tracking-[0.1em] font-medium text-teal bg-teal-dim rounded-full px-2.5 py-1.5 text-center leading-[1.5]">
+                  <div className="flex flex-col items-end gap-1.5 max-w-[140px] text-right">
+                    <span className="text-[12px] leading-[1.5] text-text-tertiary">{deal.cycle}</span>
+                    <span className="text-[11px] uppercase tracking-[0.1em] font-medium text-teal bg-teal-dim rounded-full px-2.5 py-1.5 text-center leading-[1.5]">
                       {deal.tag}
                     </span>
                   </div>
                 </div>
                 {deal.href && (
-                  <span className="mt-4 flex items-center justify-between text-[12px] font-medium text-accent">
+                  <span className="mt-4 flex items-center justify-between text-[14px] font-medium text-accent">
                     Read deal story
                     <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform">→</span>
                   </span>

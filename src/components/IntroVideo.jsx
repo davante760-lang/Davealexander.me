@@ -52,7 +52,7 @@ export default function IntroVideo() {
             aria-label="Play Dave’s introduction"
             className="group absolute inset-0 flex items-center justify-center cursor-pointer bg-black/10 hover:bg-black/5 focus-visible:outline-none"
           >
-            <span className="flex h-14 w-20 items-center justify-center rounded-2xl bg-accent shadow-xl transition-[background-color,transform] group-hover:bg-accent-hover group-hover:scale-105 group-focus-visible:ring-4 group-focus-visible:ring-white group-focus-visible:ring-offset-4 group-focus-visible:ring-offset-bg">
+            <span className="flex h-14 w-20 items-center justify-center rounded-2xl bg-accent-strong shadow-xl transition-[background-color,transform] group-hover:bg-accent-strong-hover group-hover:scale-105 group-focus-visible:ring-4 group-focus-visible:ring-white group-focus-visible:ring-offset-4 group-focus-visible:ring-offset-bg">
               <svg className="h-7 w-7 translate-x-0.5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M6 3.5v17L20 12 6 3.5Z" />
               </svg>
@@ -61,7 +61,7 @@ export default function IntroVideo() {
         )}
       </div>
       {playError && (
-        <p role="status" className="mt-3 text-sm text-text-secondary">
+        <p role="status" className="mt-3 text-[15px] text-text-secondary">
           Having trouble playing?{' '}
           <a href="/media/dave-intro.mp4" className="text-accent underline underline-offset-4">Open the video directly.</a>
         </p>

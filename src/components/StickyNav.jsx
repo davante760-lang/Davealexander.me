@@ -10,8 +10,8 @@ const navLinks = [
 ]
 
 // The menu shares the same accent palette as the rest of the site.
-const COBALT = 'var(--color-accent)'
-const COBALT_BRIGHT = 'var(--color-accent-hover)'
+const COBALT = 'var(--color-accent-strong)'
+const COBALT_BRIGHT = 'var(--color-accent-strong-hover)'
 
 export default function StickyNav() {
   const [scrolled, setScrolled] = useState(false)
@@ -32,11 +32,11 @@ export default function StickyNav() {
 
   return (
     <nav
-      className="fixed left-1/2 top-5 z-50 -translate-x-1/2 transition-all duration-300"
+      className="fixed max-w-[calc(100%-24px)] left-1/2 top-5 z-50 -translate-x-1/2 transition-all duration-300"
       style={{ willChange: 'transform' }}
     >
       <div
-        className="flex items-center gap-2 sm:gap-3 rounded-full backdrop-blur-xl px-3 sm:px-4 py-2"
+        className="flex items-center gap-1.5 sm:gap-3 whitespace-nowrap rounded-full backdrop-blur-xl px-3 sm:px-4 py-2"
         style={{
           background: scrolled ? 'rgba(14,16,22,0.82)' : 'rgba(14,16,22,0.64)',
           border: '1px solid rgba(255,255,255,0.07)',
@@ -47,7 +47,7 @@ export default function StickyNav() {
         }}
       >
         {/* Logo mark + wordmark */}
-        <a href="/" className="flex items-center gap-2 pl-2 pr-1 sm:pr-2 group" aria-label="Dave Alexander home">
+        <a href="/" className="flex items-center gap-1.5 sm:gap-2 pl-1 sm:pl-2 pr-0 sm:pr-2 group" aria-label="Dave Alexander home">
           <span
             className="inline-block h-4 w-4 rounded-[4px]"
             style={{
@@ -56,7 +56,7 @@ export default function StickyNav() {
             }}
             aria-hidden="true"
           />
-          <span className="font-semibold text-[14px] text-white tracking-[-0.01em]">
+          <span className="font-semibold text-[15px] sm:text-[16px] text-white tracking-[-0.01em]">
             Dave Alexander
           </span>
         </a>
@@ -74,7 +74,7 @@ export default function StickyNav() {
             <button
               key={link.id}
               onClick={() => scrollTo(link.id)}
-              className="text-[13px] text-white/65 hover:text-white px-3 py-1.5 rounded-full transition-colors duration-200"
+              className="text-[15px] text-white/65 hover:text-white px-3 py-1.5 rounded-full transition-colors duration-200"
             >
               {link.label}
             </button>
@@ -84,7 +84,7 @@ export default function StickyNav() {
         {/* CTA. Primary action on this personal-brand page is the resume section. */}
         <button
           onClick={() => scrollTo('resume')}
-          className="inline-flex items-center gap-1.5 rounded-full text-[13px] font-medium text-white pl-4 pr-3.5 py-2 ml-1 sm:ml-2 transition-all duration-200"
+          className="inline-flex items-center gap-1.5 rounded-full text-[14px] sm:text-[15px] font-medium text-white pl-3 pr-2.5 sm:pl-4 sm:pr-3.5 py-2 ml-0 sm:ml-2 transition-all duration-200"
           style={{
             background: COBALT,
             boxShadow: `0 4px 16px -4px color-mix(in srgb, ${COBALT} 50%, transparent)`,
@@ -99,7 +99,7 @@ export default function StickyNav() {
           }}
         >
           Get resume
-          <span aria-hidden="true" className="text-[14px] leading-none">→</span>
+          <span aria-hidden="true" className="text-[16px] leading-none">→</span>
         </button>
       </div>
     </nav>

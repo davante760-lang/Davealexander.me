@@ -16,11 +16,13 @@
   --color-border-light: #1e2128;
   --color-text-primary: #F7F8FB;
   --color-text-secondary: #C5CCD6;
-  --color-text-tertiary: #9CA5B2;
-  --color-accent: #3454ff;
-  --color-accent-hover: #5470ff;
-  --color-accent-dim: rgba(52, 84, 255, 0.12);
-  --color-accent-subtle: rgba(52, 84, 255, 0.06);
+  --color-text-tertiary: #ABB6C8;
+  --color-accent: #3478f6;
+  --color-accent-hover: #4c8dff;
+  --color-accent-strong: #2463df;
+  --color-accent-strong-hover: #1d56c9;
+  --color-accent-dim: rgba(52, 120, 246, 0.12);
+  --color-accent-subtle: rgba(52, 120, 246, 0.06);
   --color-blue: #5b8def;
   --color-blue-dim: rgba(91, 141, 239, 0.12);
   --color-teal: #4ecdc4;
@@ -35,6 +37,7 @@
 
 body {
   font-family: var(--font-sans);
+  font-size: 17px;
   color: var(--color-text-primary);
   background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
@@ -45,6 +48,24 @@ body {
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--color-bg); }
 ::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+
+/* Give deal figures room to breathe when larger type meets a narrow screen. */
+.deal-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.deal-metrics > div { min-width: 0; padding: 1.25rem .75rem; }
+.deal-metrics > div:nth-child(even) { border-left: 1px solid var(--color-border); }
+.deal-metrics > div:nth-child(n + 3) { border-top: 1px solid var(--color-border); }
+.deal-metrics > div:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+@media (min-width: 640px) {
+  .deal-metrics { grid-template-columns: repeat(var(--metric-columns), minmax(0, 1fr)); }
+  .deal-metrics > div { padding-inline: 1.5rem; }
+  .deal-metrics > div + div { border-left: 1px solid var(--color-border); }
+  .deal-metrics > div:nth-child(n + 3) { border-top: 0; }
+  .deal-metrics > div:last-child:nth-child(odd) { grid-column: auto; }
+}
 
 /* A decorative desktop pointer; native cursors remain the default and fallback. */
 .coin-cursor {

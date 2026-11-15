@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { FadeIn, SectionTitle } from './AnimatedSection'
 
-const storyLinkClass = 'font-medium text-text-primary underline decoration-accent/50 underline-offset-4 transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4 rounded-sm'
+const storyLinkClass = 'font-medium text-text-primary underline decoration-accent/50 underline-offset-4 transition-colors hover:text-accent-hover focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4 rounded-sm'
 
 const cards = [
   {
@@ -35,7 +35,7 @@ export default function WhatImBuiltFor() {
         </FadeIn>
 
         <FadeIn delay={0.05}>
-          <p className="text-[14.5px] leading-[1.75] text-text-secondary max-w-[680px] mb-8">
+          <p className="text-[16.5px] leading-[1.75] text-text-secondary max-w-[680px] mb-8">
             The sales challenges where my experience is most useful.
           </p>
         </FadeIn>
@@ -49,9 +49,9 @@ export default function WhatImBuiltFor() {
                 className="bg-surface-2 border border-border rounded-xl p-5"
               >
                 <h3 className="font-heading font-medium text-text-primary mb-2">{card.title}</h3>
-                <p className="text-[14.5px] leading-[1.75] text-text-secondary">{card.body}</p>
-                <p className="mt-4 border-t border-border pt-3 text-[13px] leading-[1.75] text-text-secondary">
-                  <span className="font-medium text-accent">Proof: </span>{card.proof}
+                <p className="text-[16.5px] leading-[1.75] text-text-secondary">{card.body}</p>
+                <p className="mt-4 border-t border-border pt-3 text-[15px] leading-[1.75] text-text-secondary">
+                  <span className="font-medium text-accent-hover">Proof: </span>{card.proof}
                 </p>
               </motion.div>
             </FadeIn>

@@ -16,7 +16,7 @@ export default function QuarterlyAttainment() {
         </FadeIn>
         <FadeIn delay={0.1}>
           <div className="overflow-x-auto rounded-xl border border-border bg-surface-1" tabIndex="0">
-            <table className="w-full min-w-[700px] border-collapse text-[13px]">
+            <table className="w-full min-w-[700px] border-collapse text-[15px]">
               <caption className="sr-only">Quarterly quota attainment at Samsara for FY23 through FY25 and Netradyne for 2026</caption>
               <thead>
                 <tr className="bg-surface-3 text-text-primary">
@@ -38,7 +38,7 @@ export default function QuarterlyAttainment() {
               </tbody>
             </table>
           </div>
-          <p className="text-[12px] text-text-tertiary leading-relaxed mt-3">
+          <p className="text-[14px] text-text-tertiary leading-relaxed mt-3">
             Netradyne: 170% of first-year ramp quota. Full-quota figures reflect seven net-new wins:
             $317,500 per calendar quarter and $1.27M annually, rounded. — = not reported.
           </p>

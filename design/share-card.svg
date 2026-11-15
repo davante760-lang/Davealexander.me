@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <radialGradient id="glow" cx="100%" cy="0%" r="100%">
-      <stop offset="0" stop-color="#3454ff" stop-opacity=".2"/>
-      <stop offset=".8" stop-color="#3454ff" stop-opacity="0"/>
+      <stop offset="0" stop-color="#3478f6" stop-opacity=".2"/>
+      <stop offset=".8" stop-color="#3478f6" stop-opacity="0"/>
     </radialGradient>
   </defs>
   <rect width="1200" height="630" fill="#0b0d12"/>
   <rect width="1200" height="630" fill="url(#glow)"/>
-  <path d="M834 0 936 103 1084 60 1200 174 M936 103 974 264 1200 174 M974 264 1139 333 1200 174" fill="none" stroke="#3454ff" stroke-opacity=".22" stroke-width="1.5"/>
-  <g fill="#5470ff" opacity=".6">
+  <path d="M834 0 936 103 1084 60 1200 174 M936 103 974 264 1200 174 M974 264 1139 333 1200 174" fill="none" stroke="#3478f6" stroke-opacity=".22" stroke-width="1.5"/>
+  <g fill="#4c8dff" opacity=".6">
     <circle cx="936" cy="103" r="3"/><circle cx="1084" cy="60" r="3"/>
     <circle cx="974" cy="264" r="3"/><circle cx="1139" cy="333" r="3"/>
   </g>
-  <rect x="72" y="76" width="64" height="6" rx="3" fill="#3454ff"/>
+  <rect x="72" y="76" width="64" height="6" rx="3" fill="#3478f6"/>
   <g font-family="Helvetica, Arial, sans-serif">
     <text x="72" y="239" fill="#f5f6f8" font-size="88" font-weight="700" letter-spacing="-3">Dave Alexander</text>
-    <text x="75" y="306" fill="#8ba0ff" font-size="35" font-weight="500">Enterprise Account Executive</text>
+    <text x="75" y="306" fill="#93c0ff" font-size="35" font-weight="500">Enterprise Account Executive</text>
     <text x="75" y="394" fill="#b7becb" font-size="28">Deal stories. Sales approach. Track record.</text>
     <path d="M75 469H1125" stroke="#282d39"/>
     <text x="75" y="545" fill="#f5f6f8" font-size="28" font-weight="500">davealexander.me</text>
   </g>
-  <path d="M1088 530h30m-12-12 12 12-12 12" fill="none" stroke="#6e87ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1088 530h30m-12-12 12 12-12 12" fill="none" stroke="#78adff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

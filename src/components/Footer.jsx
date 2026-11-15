@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="py-8 border-t border-border text-center">
-      <p className="text-text-tertiary text-sm">
+      <p className="text-text-tertiary text-[15px]">
         <span>Dallas, TX</span>
         {' · '}
         <a

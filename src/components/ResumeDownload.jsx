@@ -11,7 +11,7 @@ export default function ResumeDownload() {
             download
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center gap-2 bg-accent text-white rounded-xl px-8 py-3.5 font-medium transition-colors hover:bg-accent/90"
+            className="inline-flex items-center gap-2 bg-accent-strong text-white rounded-xl px-8 py-3.5 text-[17px] font-medium transition-colors hover:bg-accent-strong-hover"
           >
             <svg
               width="16"
@@ -30,7 +30,7 @@ export default function ResumeDownload() {
             </svg>
             Download Resume (PDF)
           </motion.a>
-          <p className="text-text-tertiary text-xs mt-3">
+          <p className="text-text-tertiary text-[14px] mt-3">
             Two-page PDF · Enterprise Account Executive
           </p>
         </FadeIn>

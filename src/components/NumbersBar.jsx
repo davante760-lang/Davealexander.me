@@ -93,7 +93,7 @@ export default function NumbersBar() {
                 whileHover={{ y: -2 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}
               >
-                <div className="font-heading text-accent text-[32px] md:text-[40px] font-semibold tracking-[-0.03em] leading-none tabular-nums">
+                <div className="font-heading text-accent text-[34px] md:text-[44px] font-semibold tracking-[-0.03em] leading-none tabular-nums">
                   <AnimatedNumber
                     prefix={item.prefix}
                     number={item.number}
@@ -103,10 +103,10 @@ export default function NumbersBar() {
                     value={item.value}
                   />
                 </div>
-                <div className="text-[10px] md:text-[11px] uppercase tracking-[0.15em] text-text-tertiary mt-3 font-medium">
+                <div className="text-[12px] uppercase tracking-[0.15em] text-text-tertiary mt-3 font-medium">
                   {item.label}
                 </div>
-                <p className="text-[13px] leading-[1.6] text-text-secondary mt-2 max-w-[320px] mx-auto md:mx-0">
+                <p className="text-[15px] leading-[1.6] text-text-secondary mt-2 max-w-[360px] mx-auto md:mx-0">
                   {item.context}
                 </p>
               </motion.div>

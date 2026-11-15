@@ -12,7 +12,7 @@ export default function Hero() {
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-20 pointer-events-none"
         style={{
-          background: 'radial-gradient(circle, rgba(91,141,239,0.3) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(52,120,246,0.3) 0%, transparent 70%)',
         }}
       />
 
@@ -22,7 +22,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="block text-[11px] uppercase tracking-[0.2em] font-medium text-accent mb-6"
+          className="block text-[12px] uppercase tracking-[0.2em] font-medium text-accent mb-6"
         >
           Enterprise AE Candidate · Complex Operational SaaS · Net-New Growth
         </motion.span>
@@ -33,7 +33,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-text-secondary text-[14.5px] leading-[1.75] max-w-[620px] mx-auto"
+          className="text-text-secondary text-[16.5px] leading-[1.75] max-w-[680px] mx-auto"
         >
           Eight-plus years in B2B SaaS. Currently an Enterprise Account Executive at Netradyne,
           where I've closed $1.16M in ARR across seven net-new wins. Previously at Samsara, I earned

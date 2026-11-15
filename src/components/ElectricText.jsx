@@ -45,7 +45,7 @@ export default function ElectricText({ text, className = '' }) {
           textAnchor="middle"
           style={{
             fontFamily: "'Geist', 'Inter', system-ui, sans-serif",
-            fontSize: '58px',
+            fontSize: '62px',
             fontWeight: 600,
             letterSpacing: '-0.04em',
             fill: 'var(--color-accent)',
@@ -64,7 +64,7 @@ export default function ElectricText({ text, className = '' }) {
           textAnchor="middle"
           style={{
             fontFamily: "'Geist', 'Inter', system-ui, sans-serif",
-            fontSize: '58px',
+            fontSize: '62px',
             fontWeight: 600,
             letterSpacing: '-0.04em',
             fill: '#F7F8FB',

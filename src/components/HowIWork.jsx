@@ -37,10 +37,10 @@ export default function HowIWork() {
           {items.map((item, i) => (
             <FadeIn key={item.title} delay={i * 0.08}>
               <div className="pl-4 border-l border-border-light max-w-[680px]">
-                <h3 className="font-heading text-[15px] font-semibold text-text-primary tracking-[-0.01em] mb-2">
+                <h3 className="font-heading text-[17px] font-semibold text-text-primary tracking-[-0.01em] mb-2">
                   {item.title}
                 </h3>
-                <p className="text-[14.5px] leading-[1.75] text-text-secondary">
+                <p className="text-[16.5px] leading-[1.75] text-text-secondary">
                   {item.body}
                 </p>
               </div>
@@ -49,7 +49,7 @@ export default function HowIWork() {
         </div>
 
         <FadeIn delay={0.5}>
-          <p className="mt-8 pl-4 max-w-[680px] text-[13px] leading-[1.75] text-text-tertiary">
+          <p className="mt-8 pl-4 max-w-[680px] text-[15px] leading-[1.75] text-text-tertiary">
             I use <span className="font-medium text-text-secondary">MEDDPICC</span> to assess the business case, stakeholder support, decision process, and risks to close.
           </p>
         </FadeIn>

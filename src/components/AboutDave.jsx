@@ -26,14 +26,14 @@ export default function AboutDave() {
                 />
                 <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/5" />
               </div>
-              <p className="text-[10px] tracking-[0.12em] uppercase text-text-tertiary mt-3 text-center">
+              <p className="text-[12px] tracking-[0.12em] uppercase text-text-tertiary mt-3 text-center">
                 Dallas, TX
               </p>
             </motion.div>
           </FadeIn>
 
           {/* Copy */}
-          <div className="space-y-5 text-[14.5px] leading-[1.75] text-text-secondary">
+          <div className="space-y-5 text-[16.5px] leading-[1.75] text-text-secondary">
             <FadeIn delay={0.15}>
               <p>
                 Based in Dallas, TX. Eight-plus years in B2B SaaS. Started at EZLynx and

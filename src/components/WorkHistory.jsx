@@ -85,7 +85,7 @@ export default function WorkHistory() {
 
                 {/* Role */}
                 {company.role && (
-                  <h3 className="font-heading text-[15px] font-semibold text-text-primary tracking-[-0.01em] mb-4">
+                  <h3 className="font-heading text-[17px] font-semibold text-text-primary tracking-[-0.01em] mb-4">
                     {company.role}
                   </h3>
                 )}
@@ -93,7 +93,7 @@ export default function WorkHistory() {
                 {/* Takeaway */}
                 {company.takeaway && (
                   <div className="mt-auto pt-4 border-t border-border-light">
-                    <p className="text-[13px] italic text-text-tertiary leading-[1.65]">
+                    <p className="text-[15px] text-text-secondary leading-[1.65]">
                       "{company.takeaway}"
                     </p>
                   </div>

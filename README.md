@@ -35,4 +35,4 @@ Each story has an HTML entry under `deals/<slug>/index.html` for its page title 
 
 ## Link previews
 
-All HTML entries include static Open Graph and Twitter metadata with canonical URLs on `https://davealexander.me`. The shared 1200 × 630 image is `public/social/dave-alexander-enterprise-v2.png`; its editable vector source is `design/share-card.svg`. It intentionally uses evergreen wording rather than performance statistics. When replacing the artwork, use a new image filename in every HTML entry and also refresh `public/og.png`, which is retained for older preview references. Browser and Apple touch icons live in `public/`.
+All HTML entries include static Open Graph and Twitter metadata with canonical URLs on `https://davealexander.me`. The shared 1200 × 630 image is `public/social/dave-alexander-enterprise-v3.png`; its editable vector source is `design/share-card.svg`. It intentionally uses evergreen wording rather than performance statistics. When replacing the artwork, use a new image filename in every HTML entry and also refresh `public/og.png`, which is retained for older preview references. Browser and Apple touch icons live in `public/`.

@@ -61,10 +61,10 @@ export function SectionTitle({ eyebrow, title }) {
 
   return (
     <div ref={ref} className="mb-8 md:mb-10">
-      <span className="block text-[11px] uppercase tracking-[0.2em] font-medium text-accent mb-3">
+      <span className="block text-[12px] uppercase tracking-[0.2em] font-medium text-accent mb-3">
         {eyebrow}
       </span>
-      <h2 className="font-heading font-semibold tracking-[-0.025em] text-text-primary text-[26px] md:text-[32px] leading-tight">
+      <h2 className="font-heading font-semibold tracking-[-0.025em] text-text-primary text-[28px] md:text-[34px] leading-tight">
         {title}
       </h2>
       <motion.div
@@ -81,7 +81,7 @@ export function SectionTitle({ eyebrow, title }) {
 export function Subsection({ title, children, className = '' }) {
   return (
     <div className={className}>
-      <h3 className="font-heading text-[16px] font-semibold text-text-primary tracking-[-0.02em] mb-3">
+      <h3 className="font-heading text-[18px] font-semibold text-text-primary tracking-[-0.02em] mb-3">
         {title}
       </h3>
       {children}
