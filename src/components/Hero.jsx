@@ -4,7 +4,7 @@ import ElectricText from './ElectricText'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-28 md:py-32">
       <ConstellationCanvas />
 
       {/* Ambient glow */}
@@ -16,7 +16,7 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6">
+      <div className="relative z-10 w-full max-w-[860px] mx-auto text-center px-6">
         <motion.span
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -39,6 +39,27 @@ export default function Hero() {
           President's Club twice on 118% average attainment. The deals I close have one thing in
           common. I don't sell features. I sell what happens if nothing changes.
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1 }}
+          className="mt-8 max-w-[680px] mx-auto"
+        >
+          <video
+            controls
+            playsInline
+            preload="none"
+            poster="/media/dave-intro-poster.jpg"
+            width="1920"
+            height="1080"
+            aria-label="A personal introduction from Dave Alexander"
+            className="block w-full h-auto aspect-video rounded-xl border border-border bg-surface-1"
+          >
+            <source src="/media/dave-intro.mp4" type="video/mp4" />
+            <a href="/media/dave-intro.mp4">Watch Dave’s introduction</a>
+          </video>
+        </motion.div>
       </div>
 
       {/* Bottom gradient fade */}

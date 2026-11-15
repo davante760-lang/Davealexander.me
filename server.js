@@ -1,32 +1,57 @@
 import { createServer } from 'node:http';
-import { readFile } from 'node:fs/promises';
+import { open } from 'node:fs/promises';
 import { readdirSync } from 'node:fs';
+import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const types = {
   html: 'text/html; charset=utf-8', js: 'text/javascript; charset=utf-8',
   css: 'text/css; charset=utf-8', svg: 'image/svg+xml', png: 'image/png',
   jpg: 'image/jpeg', webp: 'image/webp', woff2: 'font/woff2', pdf: 'application/pdf',
+  mp4: 'video/mp4', vtt: 'text/vtt; charset=utf-8',
 };
-const assets = new Map();
-function collectAssets(directory = '') {
-  for (const entry of readdirSync(new URL(`./dist/${directory}`, import.meta.url), { withFileTypes: true })) {
+function collectAssets(assetDirectory, assets, directory = '') {
+  for (const entry of readdirSync(join(assetDirectory, directory), { withFileTypes: true })) {
     const name = directory + entry.name;
-    if (entry.isDirectory()) collectAssets(name + '/');
-    else if (entry.isFile()) assets.set('/' + name, [name, types[name.split('.').pop()] || 'application/octet-stream']);
-  }
-}
-collectAssets();
-assets.set('/', assets.get('/index.html'));
-for (const [path, asset] of [...assets]) {
-  if (/^\/deals\/[^/]+\/index\.html$/.test(path)) {
-    const route = path.slice(0, -'/index.html'.length);
-    assets.set(route, asset);
-    assets.set(route + '/', asset);
+    if (entry.isDirectory()) collectAssets(assetDirectory, assets, name + '/');
+    else if (entry.isFile()) assets.set('/' + name, [join(assetDirectory, name), types[name.split('.').pop()] || 'application/octet-stream']);
   }
 }
 
-export function createSiteServer() {
+// null means ignore an unsupported range; false means an invalid/unsatisfiable byte range.
+function parseByteRange(value, size) {
+  if (!value || !/^bytes=/i.test(value) || value.includes(',')) return null;
+  const match = /^bytes=(\d*)-(\d*)$/i.exec(value);
+  if (!match || (!match[1] && !match[2]) || size === 0) return false;
+  const length = BigInt(size);
+  let start;
+  let end;
+  if (!match[1]) {
+    const suffix = BigInt(match[2]);
+    if (suffix === 0n) return false;
+    start = suffix >= length ? 0n : length - suffix;
+    end = length - 1n;
+  } else {
+    start = BigInt(match[1]);
+    end = match[2] ? BigInt(match[2]) : length - 1n;
+    if (start >= length || end < start) return false;
+    if (end >= length) end = length - 1n;
+  }
+  return { start: Number(start), end: Number(end) };
+}
+
+export function createSiteServer({ assetDirectory = fileURLToPath(new URL('./dist/', import.meta.url)) } = {}) {
+  const assets = new Map();
+  collectAssets(assetDirectory, assets);
+  assets.set('/', assets.get('/index.html'));
+  for (const [path, asset] of [...assets]) {
+    if (/^\/deals\/[^/]+\/index\.html$/.test(path)) {
+      const route = path.slice(0, -'/index.html'.length);
+      assets.set(route, asset);
+      assets.set(route + '/', asset);
+    }
+  }
+
   return createServer(async (request, response) => {
     response.setHeader('X-Content-Type-Options', 'nosniff');
     response.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
@@ -50,15 +75,56 @@ export function createSiteServer() {
       response.end(request.method === 'HEAD' ? undefined : 'Page not found');
       return;
     }
+    let file;
     try {
-      const data = await readFile(new URL(`./dist/${asset[0]}`, import.meta.url));
-      response.writeHead(200, {
+      file = await open(asset[0], 'r');
+      const { size } = await file.stat();
+      if (response.destroyed) {
+        await file.close();
+        file = undefined;
+        return;
+      }
+      // Range applies only to GET. Without validators, an If-Range request needs the full file.
+      const range = request.method === 'GET' && !request.headers['if-range']
+        ? parseByteRange(request.headers.range, size)
+        : null;
+      if (range === false) {
+        await file.close();
+        file = undefined;
+        response.writeHead(416, {
+          'Content-Range': `bytes */${size}`,
+          'Content-Length': 0,
+          'Accept-Ranges': 'bytes',
+          'Cache-Control': 'no-cache',
+        });
+        response.end();
+        return;
+      }
+      const headers = {
         'Content-Type': asset[1],
-        'Content-Length': data.length,
+        'Content-Length': range ? range.end - range.start + 1 : size,
+        'Accept-Ranges': 'bytes',
         'Cache-Control': 'no-cache',
-      });
-      response.end(request.method === 'HEAD' ? undefined : data);
+      };
+      if (range) headers['Content-Range'] = `bytes ${range.start}-${range.end}/${size}`;
+      if (request.method === 'HEAD') {
+        await file.close();
+        file = undefined;
+        response.writeHead(200, headers);
+        response.end();
+        return;
+      }
+      const stream = file.createReadStream(range || {});
+      file = undefined; // The stream owns and closes the file descriptor, including on disconnect.
+      const stopStream = () => stream.destroy();
+      response.once('close', stopStream);
+      stream.once('close', () => response.off('close', stopStream));
+      stream.once('error', error => response.destroy(error));
+      response.writeHead(range ? 206 : 200, headers);
+      stream.pipe(response);
     } catch {
+      if (file) await file.close().catch(() => {});
+      if (response.headersSent) { response.destroy(); return; }
       response.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
       response.end(request.method === 'HEAD' ? undefined : 'Unable to load page');
     }
