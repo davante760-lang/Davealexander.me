@@ -50,7 +50,7 @@ export default function Hero() {
             controls
             playsInline
             preload="none"
-            poster="/media/dave-intro-poster.jpg"
+            poster="/media/dave-intro-poster-38-13.jpg"
             width="1920"
             height="1080"
             aria-label="A personal introduction from Dave Alexander"
