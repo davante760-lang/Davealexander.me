@@ -4,7 +4,7 @@ const rows = [
   ['FY23', 'Samsara · ramp', '65%', '85%', '118%', '136%', '101%'],
   ['FY24', 'Samsara', '100%', '108%', '122%', '134%', '116%'],
   ['FY25', 'Samsara', '105%', '110%', '118%', '147%', '120%'],
-  ['2026', 'Netradyne', '—', '—', '105%', '208%', '91%'],
+  ['2026', 'Netradyne', '—', '52%', '105%', '208%', '91%'],
 ]
 
 export default function QuarterlyAttainment() {
@@ -39,8 +39,8 @@ export default function QuarterlyAttainment() {
             </table>
           </div>
           <p className="text-[12px] text-text-tertiary leading-relaxed mt-3">
-            Netradyne: 170% of first-year ramp quota; 91% of the full $1.27M annual quota.
-            Quarterly figures use the full $317,500 quota. — = not reported.
+            Netradyne: 170% of first-year ramp quota. Full-quota figures reflect seven net-new wins:
+            $317,500 per calendar quarter and $1.27M annually, rounded. — = not reported.
           </p>
         </FadeIn>
       </div>
