@@ -5,10 +5,8 @@ import NumbersBar from './components/NumbersBar'
 import QuarterlyAttainment from './components/QuarterlyAttainment'
 import WorkHistory from './components/WorkHistory'
 import WhatImBuiltFor from './components/WhatImBuiltFor'
-import WhyLimble from './components/WhyLimble'
 import HowIWork from './components/HowIWork'
 import MarqueeDeals from './components/MarqueeDeals'
-import WhatYoullGet from './components/WhatYoullGet'
 import AboutDave from './components/AboutDave'
 import ResumeDownload from './components/ResumeDownload'
 import Footer from './components/Footer'
@@ -40,10 +38,8 @@ export default function App() {
       <SectionDivider />
       <WorkHistory />
       <WhatImBuiltFor />
-      <WhyLimble />
       <HowIWork />
       <MarqueeDeals />
-      <WhatYoullGet />
       <AboutDave />
       <ResumeDownload />
       <Footer />

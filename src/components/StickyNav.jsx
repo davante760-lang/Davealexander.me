@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react'
 // 1stInterviewsite sections that actually render (see src/App.jsx).
 const navLinks = [
   { id: 'experience',     label: 'Experience' },
-  { id: 'why-limble',     label: 'Why Limble' },
   { id: 'how-i-sell',     label: 'How I sell' },
   { id: 'marquee-deals', label: 'Deals' },
 ]
