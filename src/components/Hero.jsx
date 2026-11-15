@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import ConstellationCanvas from './ConstellationCanvas'
 import ElectricText from './ElectricText'
+import IntroVideo from './IntroVideo'
 
 export default function Hero() {
   return (
@@ -46,19 +47,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 1 }}
           className="mt-8 max-w-[680px] mx-auto"
         >
-          <video
-            controls
-            playsInline
-            preload="none"
-            poster="/media/dave-intro-poster-38-13.jpg"
-            width="1920"
-            height="1080"
-            aria-label="A personal introduction from Dave Alexander"
-            className="block w-full h-auto aspect-video rounded-xl border border-border bg-surface-1"
-          >
-            <source src="/media/dave-intro.mp4" type="video/mp4" />
-            <a href="/media/dave-intro.mp4">Watch Dave’s introduction</a>
-          </video>
+          <IntroVideo />
         </motion.div>
       </div>
 
