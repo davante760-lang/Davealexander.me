@@ -27,7 +27,7 @@ const companies = [
     logoStyle: { width: 170, maxWidth: '100%', height: 'auto', maxHeight: 36 },
     role: 'Account Executive, Mid-Market (Jun 2021 to Feb 2023)',
     takeaway:
-      '105% against an $800K annual quota, Top 3 on a team of 8 in a year where ~50% hit number. Closed 18 net-new AMS replacement deals on 3.5\u00d7 pipeline coverage by leading full-cycle discovery, stakeholder mapping, and ROI business cases across agency principals and ops leaders.',
+      'Worked with agency principals and operations leaders on agency management software replacements. Led discovery, stakeholder mapping, and business-case development throughout the sales process.',
   },
   {
     name: 'EZLynx',
@@ -36,7 +36,7 @@ const companies = [
     logoStyle: { width: 140, objectFit: 'cover', mixBlendMode: 'lighten' },
     role: 'BDR to SMB AE (Nov 2017 to Jun 2021)',
     takeaway:
-      'Built outbound discipline from the ground up. As BDR: $400K+ qualified pipeline in a single quarter, ~25% connect-to-meeting lift, ~20% lead-to-opp lift after rolling out a lead scoring framework. Promoted to SMB AE and closed the largest full-suite AMS replacement on the SMB team that year ($42K).',
+      'Started in outbound prospecting as a BDR and progressed to SMB Account Executive. Built relationships with insurance agencies and guided buyers through agency management software evaluations.',
   },
 ]
 
