@@ -27,7 +27,7 @@ export default function AboutDave() {
                 <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/5" />
               </div>
               <p className="text-[10px] tracking-[0.12em] uppercase text-text-tertiary mt-3 text-center">
-                North Richland Hills, TX
+                Dallas, TX
               </p>
             </motion.div>
           </FadeIn>
@@ -36,7 +36,7 @@ export default function AboutDave() {
           <div className="space-y-5 text-[14.5px] leading-[1.75] text-text-secondary">
             <FadeIn delay={0.15}>
               <p>
-                Based in North Richland Hills, TX. Eight-plus years in B2B SaaS. Started at EZLynx and
+                Based in Dallas, TX. Eight-plus years in B2B SaaS. Started at EZLynx and
                 Applied Systems on the insurance tech side, then jumped to Samsara for the fleet
                 IoT motion and earned President's Club twice. Today, I'm an Enterprise Account
                 Executive at Netradyne, selling AI-powered fleet safety and video telematics.
