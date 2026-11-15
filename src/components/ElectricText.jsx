@@ -19,14 +19,8 @@ export default function ElectricText({ text, className = '' }) {
         <defs>
           <filter id={`${id}-glow`}>
             <feGaussianBlur stdDeviation="6" result="blur" />
-            <feColorMatrix
-              in="blur"
-              type="matrix"
-              values="0.4 0 0 0 0.3  0 0.3 0 0 0.4  0 0 1 0 0.9  0 0 0 1 0"
-              result="glow"
-            />
             <feMerge>
-              <feMergeNode in="glow" />
+              <feMergeNode in="blur" />
               <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
@@ -54,7 +48,7 @@ export default function ElectricText({ text, className = '' }) {
             fontSize: '58px',
             fontWeight: 600,
             letterSpacing: '-0.04em',
-            fill: '#7c6aef',
+            fill: 'var(--color-accent)',
             filter: `url(#${id}-glow)`,
             clipPath: `url(#${id}-clip)`,
             opacity: 0.6,
@@ -86,7 +80,7 @@ export default function ElectricText({ text, className = '' }) {
           y1="10"
           x2="0"
           y2={vh - 10}
-          stroke="#7c6aef"
+          stroke="var(--color-accent)"
           strokeWidth="2"
           initial={{ x1: 0, x2: 0, opacity: 0 }}
           animate={
@@ -100,7 +94,7 @@ export default function ElectricText({ text, className = '' }) {
           }
           transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
           style={{
-            filter: 'drop-shadow(0 0 6px rgba(124, 106, 239, 0.8))',
+            filter: 'drop-shadow(0 0 6px color-mix(in srgb, var(--color-accent) 80%, transparent))',
           }}
         />
       </svg>

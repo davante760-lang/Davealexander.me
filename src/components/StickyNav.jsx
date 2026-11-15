@@ -9,11 +9,9 @@ const navLinks = [
   { id: 'marquee-deals', label: 'Deals' },
 ]
 
-// Accent for logo square + CTA. Hardcoded cobalt here as the first
-// visible adoption of the new aesthetic direction. When the rest of
-// the site adopts cobalt, migrate this to a CSS variable.
-const COBALT = '#3454ff'
-const COBALT_BRIGHT = '#5470ff'
+// The menu shares the same accent palette as the rest of the site.
+const COBALT = 'var(--color-accent)'
+const COBALT_BRIGHT = 'var(--color-accent-hover)'
 
 export default function StickyNav() {
   const [scrolled, setScrolled] = useState(false)
@@ -89,15 +87,15 @@ export default function StickyNav() {
           className="inline-flex items-center gap-1.5 rounded-full text-[13px] font-medium text-white pl-4 pr-3.5 py-2 ml-1 sm:ml-2 transition-all duration-200"
           style={{
             background: COBALT,
-            boxShadow: `0 4px 16px -4px ${COBALT}80`,
+            boxShadow: `0 4px 16px -4px color-mix(in srgb, ${COBALT} 50%, transparent)`,
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.background = COBALT_BRIGHT
-            e.currentTarget.style.boxShadow = `0 6px 22px -4px ${COBALT_BRIGHT}aa`
+            e.currentTarget.style.boxShadow = `0 6px 22px -4px color-mix(in srgb, ${COBALT_BRIGHT} 67%, transparent)`
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.background = COBALT
-            e.currentTarget.style.boxShadow = `0 4px 16px -4px ${COBALT}80`
+            e.currentTarget.style.boxShadow = `0 4px 16px -4px color-mix(in srgb, ${COBALT} 50%, transparent)`
           }}
         >
           Get resume
