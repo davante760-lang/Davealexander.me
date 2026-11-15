@@ -45,3 +45,39 @@ body {
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--color-bg); }
 ::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+
+/* A decorative desktop pointer; native cursors remain the default and fallback. */
+.coin-cursor {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  z-index: 2147483647;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.coin-cursor span {
+  display: block;
+  width: 32px;
+  height: 32px;
+  transform: translate(-50%, -50%);
+  background: url('/coin-sprite.svg') 0 0 / 256px 32px no-repeat;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 2px 2px #0009);
+  animation: coin-spin 900ms steps(8) infinite paused;
+}
+
+@keyframes coin-spin {
+  to { background-position: -256px 0; }
+}
+
+@media (min-width: 768px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .coin-cursor { display: block; }
+  .coin-cursor[data-visible] { opacity: 1; }
+  .coin-cursor[data-visible] span { animation-play-state: running; }
+  html.coin-cursor-active,
+  html.coin-cursor-active * { cursor: none !important; }
+}
