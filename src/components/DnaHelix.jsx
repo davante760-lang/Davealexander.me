@@ -1,32 +1,32 @@
 import { useEffect, useRef } from 'react'
 import './DnaHelix.css'
 
-const RUNGS = Array.from({ length: 28 }, (_, index) => index)
+const RUNGS = Array.from({ length: 40 }, (_, index) => index)
 const CYCLE_MS = 6500
 
 function coordinates(index, phase = 0) {
-  const angle = index * 0.33 + phase
-  const offset = Math.sin(angle) * 46
+  const angle = index * 0.27 + phase
+  const offset = Math.sin(angle) * 92
   const depth = (Math.cos(angle) + 1) / 2
   return {
-    x: 12 + index * 15.4,
-    firstY: 80 + offset,
-    secondY: 80 - offset,
-    firstRadius: 1.8 + depth * 0.9,
-    secondRadius: 2.7 - depth * 0.9,
-    firstOpacity: 0.35 + depth * 0.65,
-    secondOpacity: 1 - depth * 0.65,
+    x: 12 + index * 15.8,
+    firstY: 130 + offset,
+    secondY: 130 - offset,
+    firstRadius: 3 + depth * 1.4,
+    secondRadius: 4.4 - depth * 1.4,
+    firstOpacity: 0.55 + depth * 0.45,
+    secondOpacity: 1 - depth * 0.45,
   }
 }
 
 function Strand() {
   return (
-    <svg viewBox="0 0 440 160" fill="none" focusable="false">
+    <svg viewBox="0 0 640 260" preserveAspectRatio="none" fill="none" focusable="false">
       {RUNGS.map(index => {
         const point = coordinates(index)
         return (
           <g key={index} data-rung={index}>
-            <line x1={point.x} x2={point.x} y1={point.firstY} y2={point.secondY} stroke="currentColor" strokeOpacity="0.32" strokeWidth="1" />
+            <line x1={point.x} x2={point.x} y1={point.firstY} y2={point.secondY} stroke="currentColor" strokeOpacity="0.6" strokeWidth="1.3" />
             <circle cx={point.x} cy={point.firstY} r={point.firstRadius} opacity={point.firstOpacity} fill="currentColor" />
             <circle cx={point.x} cy={point.secondY} r={point.secondRadius} opacity={point.secondOpacity} fill="currentColor" />
           </g>
