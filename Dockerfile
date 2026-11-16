@@ -6,6 +6,7 @@ COPY index.html vite.config.js ./
 COPY src ./src
 COPY public ./public
 COPY deals ./deals
+COPY losses ./losses
 RUN npm run build
 
 FROM node:22-alpine
