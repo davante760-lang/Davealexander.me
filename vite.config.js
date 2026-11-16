@@ -10,9 +10,10 @@ export default defineConfig({
     rolldownOptions: {
       input: {
         main: fileURLToPath(new URL('./index.html', import.meta.url)),
-        ...Object.fromEntries(readdirSync(new URL('./deals/', import.meta.url), { withFileTypes: true })
-          .filter(entry => entry.isDirectory())
-          .map(entry => [entry.name, fileURLToPath(new URL(`./deals/${entry.name}/index.html`, import.meta.url))])),
+        ...Object.fromEntries(['deals', 'losses'].flatMap(section =>
+          readdirSync(new URL(`./${section}/`, import.meta.url), { withFileTypes: true })
+            .filter(entry => entry.isDirectory())
+            .map(entry => [`${section}-${entry.name}`, fileURLToPath(new URL(`./${section}/${entry.name}/index.html`, import.meta.url))]))),
       },
     },
   },

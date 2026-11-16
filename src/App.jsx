@@ -7,12 +7,15 @@ import WorkHistory from './components/WorkHistory'
 import WhatImBuiltFor from './components/WhatImBuiltFor'
 import HowIWork from './components/HowIWork'
 import MarqueeDeals from './components/MarqueeDeals'
+import Losses from './components/Losses'
 import AboutDave from './components/AboutDave'
 import ResumeDownload from './components/ResumeDownload'
 import Footer from './components/Footer'
 import DealStory from './components/DealStory'
 import { dealCards } from './data/dealCards'
 import { dealStories } from './data/dealStories'
+import { lossCards } from './data/lossCards'
+import { lossStories } from './data/lossStories'
 import { SectionDivider } from './components/AnimatedSection'
 
 export default function App() {
@@ -29,6 +32,12 @@ export default function App() {
     return <DealStory deal={dealCards[dealIndex]} story={dealStories[slug]} nextDeal={dealCards[(dealIndex + 1) % dealCards.length]} />
   }
 
+  const lossSlug = window.location.pathname.match(/^\/losses\/([^/]+)(?:\/|\/index\.html)?$/)?.[1]
+  const lossIndex = lossCards.findIndex(deal => deal.slug === lossSlug)
+  if (lossIndex >= 0 && lossStories[lossSlug]) {
+    return <DealStory deal={lossCards[lossIndex]} story={lossStories[lossSlug]} nextDeal={lossCards[(lossIndex + 1) % lossCards.length]} collectionHref="/#losses" collectionLabel="Back to losses" />
+  }
+
   return (
     <>
       <StickyNav />
@@ -40,6 +49,7 @@ export default function App() {
       <WhatImBuiltFor />
       <HowIWork />
       <MarqueeDeals />
+      <Losses />
       <AboutDave />
       <ResumeDownload />
       <Footer />

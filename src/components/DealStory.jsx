@@ -2,12 +2,12 @@ import Footer from './Footer'
 
 const linkStyle = 'rounded-sm text-[15px] font-medium transition-colors hover:text-text-primary focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4'
 
-export default function DealStory({ deal, story, nextDeal }) {
+export default function DealStory({ deal, story, nextDeal, collectionHref = '/#marquee-deals', collectionLabel = 'Back to deals' }) {
   return (
     <>
       <header className="px-6">
         <nav aria-label="Deal story navigation" className="max-w-[860px] mx-auto flex items-center justify-between gap-4 py-6 border-b border-border">
-          <a href="/#marquee-deals" className={`${linkStyle} text-text-secondary`}><span aria-hidden="true">← </span>Back to deals</a>
+          <a href={collectionHref} className={`${linkStyle} text-text-secondary`}><span aria-hidden="true">← </span>{collectionLabel}</a>
           <a href="/" className={`${linkStyle} font-heading text-text-tertiary`}>Dave Alexander</a>
         </nav>
       </header>
@@ -17,7 +17,7 @@ export default function DealStory({ deal, story, nextDeal }) {
           <header className="mb-10 md:mb-12">
             <div className="flex items-center justify-between gap-5 mb-7">
               <span className="text-[12px] uppercase tracking-[0.2em] font-medium text-accent">{story.eyebrow || 'Deal story'}</span>
-              <img src={deal.logo} alt={deal.logoAlt || `${deal.name} logo`} className="w-auto max-w-[120px] sm:max-w-[150px] max-h-[64px] object-contain" style={deal.logoStyle} />
+              {deal.logo && <img src={deal.logo} alt={deal.logoAlt || `${deal.name} logo`} className="w-auto max-w-[120px] sm:max-w-[150px] max-h-[64px] object-contain" style={deal.logoStyle} />}
             </div>
             <h1 id="deal-title" className="font-heading text-[34px] md:text-[44px] leading-[1.12] font-semibold tracking-[-0.035em] mb-4">{story.name}</h1>
             <p className="text-[18px] md:text-[20px] leading-[1.65] text-text-secondary max-w-[600px]">{story.headline}</p>
@@ -50,7 +50,7 @@ export default function DealStory({ deal, story, nextDeal }) {
 
           <nav aria-label="Continue exploring" className="border-t border-border mt-12 pt-7">
             <div className="flex flex-wrap items-center justify-between gap-5">
-              <a href="/#marquee-deals" className={`${linkStyle} text-accent`}><span aria-hidden="true">← </span>Back to deals</a>
+              <a href={collectionHref} className={`${linkStyle} text-accent`}><span aria-hidden="true">← </span>{collectionLabel}</a>
               <a href={nextDeal.href} className={`${linkStyle} text-text-secondary`} aria-label={`Next story: ${nextDeal.name}`}>{nextDeal.name} <span aria-hidden="true">→</span></a>
             </div>
             <a href="/DaveAlexanderResume.pdf?v=20261116-above-beyond" download className={`${linkStyle} inline-block mt-6 text-text-tertiary`}>Download resume <span aria-hidden="true">↓</span></a>

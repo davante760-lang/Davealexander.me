@@ -45,7 +45,7 @@ export function createSiteServer({ assetDirectory = fileURLToPath(new URL('./dis
   collectAssets(assetDirectory, assets);
   assets.set('/', assets.get('/index.html'));
   for (const [path, asset] of [...assets]) {
-    if (/^\/deals\/[^/]+\/index\.html$/.test(path)) {
+    if (/^\/(?:deals|losses)\/[^/]+\/index\.html$/.test(path)) {
       const route = path.slice(0, -'/index.html'.length);
       assets.set(route, asset);
       assets.set(route + '/', asset);

@@ -39,6 +39,44 @@ test('serves site assets and health without exposing repository files', async (t
   }
 });
 
+test('serves distinct win and loss stories through direct URLs and route aliases', async (t) => {
+  const assetDirectory = await mkdtemp(join(tmpdir(), 'dave-site-stories-'));
+  const stories = [
+    ['deals/kenco', '<title>Win story fixture</title>'],
+    ['losses/kenco', '<title>Kenco loss story fixture</title>'],
+    ['losses/tcw', '<title>TCW loss story fixture</title>'],
+  ];
+  await writeFile(join(assetDirectory, 'index.html'), '<title>Home fixture</title>');
+  for (const [route, html] of stories) {
+    await mkdir(join(assetDirectory, route), { recursive: true });
+    await writeFile(join(assetDirectory, route, 'index.html'), html);
+  }
+  const server = createSiteServer({ assetDirectory });
+  t.after(async () => {
+    await new Promise(resolve => server.close(resolve));
+    await rm(assetDirectory, { recursive: true, force: true });
+  });
+  server.listen(0, '127.0.0.1');
+  await once(server, 'listening');
+  const origin = `http://127.0.0.1:${server.address().port}`;
+
+  for (const [route, html] of stories) {
+    for (const suffix of ['', '/', '/index.html', '/?source=portfolio']) {
+      const response = await fetch(`${origin}/${route}${suffix}`);
+      assert.equal(response.status, 200, route + suffix);
+      assert.equal(response.headers.get('content-type'), 'text/html; charset=utf-8');
+      assert.equal(await response.text(), html, route + suffix);
+    }
+  }
+  const head = await fetch(origin + '/losses/tcw', { method: 'HEAD' });
+  assert.equal(head.status, 200);
+  assert.equal(head.headers.get('content-length'), String(Buffer.byteLength(stories[2][1])));
+  assert.equal(await head.text(), '');
+  for (const route of ['/losses/missing/', '/deals/missing/', '/losses/', '/losses/tcw/extra']) {
+    assert.equal((await fetch(origin + route)).status, 404, route);
+  }
+});
+
 test('serves video with seekable byte ranges and body-free HEAD responses', async (t) => {
   const assetDirectory = await mkdtemp(join(tmpdir(), 'dave-site-video-'));
   // This small transport fixture exercises byte-for-byte responses, not video decoding.

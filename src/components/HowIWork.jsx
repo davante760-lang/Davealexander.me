@@ -17,7 +17,7 @@ const items = [
   },
   {
     title: 'Test what matters to the customer',
-    body: <>An evaluation needs to address performance, workflow, and practical adoption. <strong className="font-medium text-text-primary">Kenco</strong> reinforced that lesson: strong safety results weren’t enough when everyday usability remained unresolved. The customer’s definition of success has to guide the evaluation.</>,
+    body: <>An evaluation needs to address performance, workflow, and practical adoption. <a href="/losses/kenco/" className={storyLinkClass}>Kenco</a> reinforced that lesson: strong safety results weren’t enough when everyday usability remained unresolved. The customer’s definition of success has to guide the evaluation.</>,
   },
   {
     title: 'Make the purchase practical',

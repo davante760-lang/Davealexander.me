@@ -7,6 +7,7 @@ const navLinks = [
   { id: 'experience',     label: 'Experience' },
   { id: 'how-i-sell',     label: 'How I sell' },
   { id: 'marquee-deals', label: 'Deals' },
+  { id: 'losses', label: 'Losses' },
 ]
 
 // The menu shares the same accent palette as the rest of the site.
