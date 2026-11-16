@@ -31,13 +31,10 @@ const numbers = [
     decimals: 0,
   },
   {
-    value: '55%',
-    label: 'Self-Sourced Pipeline',
-    context: 'Approximately 55% of my pipeline at Samsara came from targeted outbound prospecting.',
-    prefix: '',
-    number: 55,
-    suffix: '%',
-    decimals: 0,
+    value: 'Q4 FY25',
+    label: 'Above and Beyond Award',
+    context: 'Samsara: returned from a full quarter of parental leave with no new pipeline generated during that period. Rebuilt through outbound calls, created urgency to close, and met a fully ramped quota.',
+    animated: false,
   },
 ]
 

@@ -18,7 +18,7 @@ const companies = [
     logoStyle: { width: 180, maxWidth: '100%', height: 'auto' },
     role: 'Account Executive, Mid-Market (Feb 2023 to Jan 2026)',
     takeaway:
-      '118% avg attainment against a $900K quota across FY24 and FY25. Grew average deal size to $84K through multi-product attach and executive-aligned business cases. $4 to $5M in qualified pipeline annually, ~55% self-sourced. $250K competitive displacement.',
+      '118% avg attainment against a $900K quota across FY24 and FY25. Grew average deal size to $84K through multi-product attach and executive-aligned business cases. $4 to $5M in qualified pipeline annually, ~55% self-sourced. $250K competitive displacement. Earned the Q4 FY25 Above and Beyond Award for hitting a fully ramped quota after a quarter of parental leave.',
   },
   {
     name: 'Applied Systems',

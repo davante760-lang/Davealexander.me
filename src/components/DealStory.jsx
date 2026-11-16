@@ -53,7 +53,7 @@ export default function DealStory({ deal, story, nextDeal }) {
               <a href="/#marquee-deals" className={`${linkStyle} text-accent`}><span aria-hidden="true">← </span>Back to deals</a>
               <a href={nextDeal.href} className={`${linkStyle} text-text-secondary`} aria-label={`Next story: ${nextDeal.name}`}>{nextDeal.name} <span aria-hidden="true">→</span></a>
             </div>
-            <a href="/DaveAlexanderResume.pdf?v=20261116" download className={`${linkStyle} inline-block mt-6 text-text-tertiary`}>Download resume <span aria-hidden="true">↓</span></a>
+            <a href="/DaveAlexanderResume.pdf?v=20261116-above-beyond" download className={`${linkStyle} inline-block mt-6 text-text-tertiary`}>Download resume <span aria-hidden="true">↓</span></a>
           </nav>
         </article>
       </main>
