@@ -1,10 +1,10 @@
 import { FadeIn, SectionTitle } from './AnimatedSection'
 
 const rows = [
-  ['FY23', 'Samsara · ramp', '65%', '85%', '118%', '136%', '101%'],
-  ['FY24', 'Samsara', '100%', '108%', '122%', '134%', '116%'],
-  ['FY25', 'Samsara', '105%', '110%', '118%', '147%', '120%'],
-  ['2026', 'Netradyne', '—', '52%', '105%', '208%', '91%'],
+  { period: 'FY23 · ramp', company: 'Samsara', quota: '$900K annual quota', quarters: ['65%', '85%', '118%', '136%'], annual: '101%' },
+  { period: 'FY24', company: 'Samsara', quota: '$900K annual quota', quarters: ['100%', '108%', '122%', '134%'], annual: '116%' },
+  { period: 'FY25', company: 'Samsara', quota: '$900K annual quota', quarters: ['105%', '110%', '118%', '147%'], annual: '120%' },
+  { period: '2026', company: 'Netradyne', quota: '$1.27M annual quota', quarters: ['—', '52%', '105%', '208%'], annual: '91%' },
 ]
 
 export default function QuarterlyAttainment() {
@@ -17,22 +17,25 @@ export default function QuarterlyAttainment() {
         <FadeIn delay={0.1}>
           <div className="overflow-x-auto rounded-xl border border-border bg-surface-1" tabIndex="0">
             <table className="w-full min-w-[700px] border-collapse text-[15px]">
-              <caption className="sr-only">Quarterly quota attainment at Samsara for FY23 through FY25 and Netradyne for 2026</caption>
+              <caption className="sr-only">Annual quota and quarterly attainment at Samsara for FY23 through FY25 and Netradyne for 2026</caption>
               <thead>
                 <tr className="bg-surface-3 text-text-primary">
-                  {['Period', 'Q1', 'Q2', 'Q3', 'Q4', 'Annual quota'].map((heading, index) => (
+                  {['Period / Company', 'Q1', 'Q2', 'Q3', 'Q4', 'Annual attainment'].map((heading, index) => (
                     <th key={heading} scope="col" className={`px-4 py-3.5 font-medium border-b border-border ${index === 0 ? 'text-left' : 'text-center'}`}>{heading}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {rows.map((row) => (
-                  <tr key={row[0]} className="border-b border-border-light last:border-b-0 even:bg-surface-2/40">
+                  <tr key={row.period} className="border-b border-border-light last:border-b-0 even:bg-surface-2/40">
                     <th scope="row" className="px-4 py-3.5 text-left font-medium text-text-primary whitespace-nowrap">
-                      {row[0]} <span className="text-text-tertiary font-normal">({row[1]})</span>
+                      <span className="block">{row.period}</span>
+                      <span className="block mt-1 font-normal text-text-secondary">
+                        {row.company} <span className="text-text-tertiary">· {row.quota}</span>
+                      </span>
                     </th>
-                    {row.slice(2, 6).map((value, index) => <td key={`${row[0]}-${index}`} className="px-4 py-3.5 text-center text-text-secondary whitespace-nowrap">{value}</td>)}
-                    <td className="px-4 py-3.5 text-center font-semibold text-teal whitespace-nowrap">{row[6]}</td>
+                    {row.quarters.map((value, index) => <td key={`${row.period}-${index}`} className="px-4 py-3.5 text-center text-text-secondary whitespace-nowrap">{value}</td>)}
+                    <td className="px-4 py-3.5 text-center font-semibold text-teal whitespace-nowrap">{row.annual}</td>
                   </tr>
                 ))}
               </tbody>
