@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
-import ConstellationCanvas from './ConstellationCanvas'
+import DnaHelix from './DnaHelix'
 import ElectricText from './ElectricText'
 import IntroVideo from './IntroVideo'
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-28 md:py-32">
-      <ConstellationCanvas />
+      <DnaHelix />
 
       {/* Ambient glow */}
       <div

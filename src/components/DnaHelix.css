@@ -1,0 +1,41 @@
+.hero-dna {
+  position: absolute;
+  inset: 0;
+  display: none;
+  pointer-events: none;
+  color: var(--color-accent);
+  opacity: 0.8;
+}
+
+.hero-dna-wing {
+  position: absolute;
+  top: 44%;
+  width: calc((100% - 880px) / 2);
+  max-width: 520px;
+  height: 160px;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+.hero-dna-wing svg {
+  position: absolute;
+  width: 440px;
+  height: 160px;
+  max-width: none;
+}
+
+.hero-dna-left {
+  left: 0;
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 68%, transparent);
+}
+.hero-dna-left svg { right: 0; }
+
+.hero-dna-right {
+  right: 0;
+  mask-image: linear-gradient(to left, transparent, #000 12%, #000 68%, transparent);
+}
+.hero-dna-right svg { left: 0; transform: scaleX(-1); }
+
+@media (min-width: 1100px) {
+  .hero-dna { display: block; }
+}
