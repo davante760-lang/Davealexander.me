@@ -7,7 +7,7 @@ export default function ResumeDownload() {
       <div className="max-w-[860px] mx-auto text-center">
         <FadeIn>
           <motion.a
-            href="/DaveAlexanderResume.pdf"
+            href="/DaveAlexanderResume.pdf?v=20261116"
             download
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}

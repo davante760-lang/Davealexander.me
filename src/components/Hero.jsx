@@ -36,8 +36,8 @@ export default function Hero() {
           className="text-text-secondary text-[16.5px] leading-[1.75] max-w-[680px] mx-auto"
         >
           Eight-plus years in B2B SaaS. Currently an Enterprise Account Executive at Netradyne,
-          where I've closed $1.16M in ARR across seven net-new wins. Previously at Samsara, I earned
-          President's Club twice on 118% average attainment. The deals I close have one thing in
+          where I've closed $1.16M in ARR across seven net-new wins. Previously at Samsara, I averaged
+          118% quota attainment across two fiscal years. The deals I close have one thing in
           common. I don't sell features. I sell what happens if nothing changes.
         </motion.p>
 

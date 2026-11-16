@@ -37,8 +37,8 @@ export default function AboutDave() {
             <FadeIn delay={0.15}>
               <p>
                 Based in Dallas, TX. Eight-plus years in B2B SaaS. Started at EZLynx and
-                Applied Systems on the insurance tech side, then jumped to Samsara for the fleet
-                IoT motion and earned President's Club twice. Today, I'm an Enterprise Account
+                Applied Systems on the insurance tech side, then moved to Samsara to sell fleet
+                technology. Today, I'm an Enterprise Account
                 Executive at Netradyne, selling AI-powered fleet safety and video telematics.
               </p>
             </FadeIn>

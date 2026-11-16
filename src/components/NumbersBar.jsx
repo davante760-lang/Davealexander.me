@@ -31,12 +31,12 @@ const numbers = [
     decimals: 0,
   },
   {
-    value: '2×',
-    label: 'President’s Club',
-    context: 'Samsara, FY24 and FY25. Top 10% of the mid-market sales organization.',
+    value: '55%',
+    label: 'Self-Sourced Pipeline',
+    context: 'Approximately 55% of my pipeline at Samsara came from targeted outbound prospecting.',
     prefix: '',
-    number: 2,
-    suffix: '×',
+    number: 55,
+    suffix: '%',
     decimals: 0,
   },
 ]

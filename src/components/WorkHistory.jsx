@@ -18,7 +18,7 @@ const companies = [
     logoStyle: { width: 180, maxWidth: '100%', height: 'auto' },
     role: 'Account Executive, Mid-Market (Feb 2023 to Jan 2026)',
     takeaway:
-      '118% avg attainment against a $900K quota across FY24 and FY25. Grew average deal size to $84K through multi-product attach and executive-aligned business cases. $4 to $5M in qualified pipeline annually, ~55% self-sourced. $250K competitive displacement. Two-time President\u2019s Club, top 10% of the Mid-Market sales org.',
+      '118% avg attainment against a $900K quota across FY24 and FY25. Grew average deal size to $84K through multi-product attach and executive-aligned business cases. $4 to $5M in qualified pipeline annually, ~55% self-sourced. $250K competitive displacement.',
   },
   {
     name: 'Applied Systems',
