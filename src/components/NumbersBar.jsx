@@ -5,7 +5,7 @@ import { FadeIn, SectionTitle } from './AnimatedSection'
 const numbers = [
   {
     value: '$1.16M',
-    label: '2026 Net-New ARR',
+    label: '2026 Net-New ARR · YTD',
     context: 'Seven account wins at Netradyne, averaging $165K in ARR per win.',
     prefix: '$',
     number: 1.16,
@@ -15,7 +15,7 @@ const numbers = [
   {
     value: '$331.9K',
     label: 'Competitive Displacement ARR',
-    context: 'Odom: 657 vehicles and $1.66M in five-year contract value. Won at Netradyne in 2026.',
+    context: 'Beverage Distributor: 657 vehicles and $1.66M in five-year contract value. Won at Netradyne in 2026.',
     prefix: '$',
     number: 331.9,
     suffix: 'K',
@@ -24,7 +24,7 @@ const numbers = [
   {
     value: '170%',
     label: 'First-Year Ramp Attainment',
-    context: 'Netradyne, 2026. Also reached 91% of the full $1.27M annual quota.',
+    context: 'Netradyne, 2026 to date. Also reached 91% of the full $1.27M annual quota.',
     prefix: '',
     number: 170,
     suffix: '%',

@@ -1,4 +1,6 @@
 import Footer from './Footer'
+import FoodAccountPlan from './FoodAccountPlan'
+import IndustryMark from './IndustryMark'
 
 const linkStyle = 'rounded-sm text-[15px] font-medium transition-colors hover:text-text-primary focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4'
 
@@ -17,10 +19,11 @@ export default function DealStory({ deal, story, nextDeal, collectionHref = '/#m
           <header className="mb-10 md:mb-12">
             <div className="flex items-center justify-between gap-5 mb-7">
               <span className="text-[12px] uppercase tracking-[0.2em] font-medium text-accent">{story.eyebrow || 'Deal story'}</span>
-              {deal.logo && <img src={deal.logo} alt={deal.logoAlt || `${deal.name} logo`} className="w-auto max-w-[120px] sm:max-w-[150px] max-h-[64px] object-contain" style={deal.logoStyle} />}
+              <IndustryMark type={deal.icon} compact />
             </div>
             <h1 id="deal-title" className="font-heading text-[34px] md:text-[44px] leading-[1.12] font-semibold tracking-[-0.035em] mb-4">{story.name}</h1>
             <p className="text-[18px] md:text-[20px] leading-[1.65] text-text-secondary max-w-[600px]">{story.headline}</p>
+            <p className="mt-4 text-[13px] leading-relaxed text-text-tertiary">Customer identity anonymized · Deal figures retained</p>
             <div aria-hidden="true" className="h-[2px] w-12 bg-accent mt-6" />
             <dl className="deal-metrics mt-8 rounded-xl border border-border bg-surface-1" style={{ '--metric-columns': story.metrics.length }}>
               {story.metrics.map((metric, index) => (
@@ -47,6 +50,8 @@ export default function DealStory({ deal, story, nextDeal, collectionHref = '/#m
               </section>
             ))}
           </div>
+
+          {deal.slug === 'food-manufacturer' && <FoodAccountPlan />}
 
           <nav aria-label="Continue exploring" className="border-t border-border mt-12 pt-7">
             <div className="flex flex-wrap items-center justify-between gap-5">

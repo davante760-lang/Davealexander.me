@@ -1,7 +1,7 @@
 const industryStories = [
   {
-    slug: 'calfrac',
-    name: 'Calfrac',
+    slug: 'oilfield-services',
+    name: 'Oilfield Services Provider',
     headline: 'Making the business case for a first camera program.',
     description: 'A fleet-specific evaluation and flexible buying plan brought 165 vehicles onto Netradyne.',
     metrics: [
@@ -13,19 +13,19 @@ const industryStories = [
       {
         title: 'How I got involved',
         paragraphs: [
-          'Our outbound team opened the relationship with Calfrac, including Omar Elazab’s outreach. I led the evaluation with their safety contact and US operations leader, turning that early engagement into a business case and a defined buying process.',
+          'Our outbound team opened the relationship with this oilfield services provider. I led the evaluation with their safety contact and operations leader, turning that early engagement into a business case and a defined buying process.',
         ],
       },
       {
         title: 'The situation',
         paragraphs: [
-          'Calfrac’s crews drove long distances after demanding shifts at remote oilfield sites. Fatigue and distraction created risk, but the company had previously decided its overall accident rate did not justify cameras. Its existing fleet technology provider was also competing for the camera business.',
+          'The customer wanted to evaluate driver safety across its oilfield operations. The business case needed to demonstrate the value of a first camera program. Its existing fleet technology provider was also competing for the camera business.',
         ],
       },
       {
         title: 'My objective',
         paragraphs: [
-          'Help Calfrac judge the investment against its own operating risks, involve the person who could approve it, and create a purchase plan that fit both the rollout deadline and the budget.',
+          'Help the customer judge the investment against its own operating risks, involve the person who could approve it, and create a purchase plan that fit both the rollout deadline and the budget.',
         ],
       },
       {
@@ -33,7 +33,7 @@ const industryStories = [
         items: [
           {
             title: 'Built the case with customer data.',
-            text: 'I worked with our solutions engineer on a model using Calfrac’s accident history. We presented the assumptions alongside pricing so the operations leader could challenge the inputs and take a clear recommendation to the CEO.',
+            text: 'I worked with our solutions engineer on a model using customer-provided safety data. We presented the assumptions alongside pricing so the operations leader could challenge the inputs and take a clear recommendation to the CEO.',
           },
           {
             title: 'Qualified the decision early.',
@@ -67,8 +67,8 @@ const industryStories = [
     ],
   },
   {
-    slug: 'woodfield',
-    name: 'Woodfield',
+    slug: 'freight-logistics',
+    name: 'Freight Logistics Provider',
     headline: 'Moving a “next year” purchase into this year.',
     description: 'Trial evidence and a workable payment plan unlocked a 116-vehicle camera replacement.',
     metrics: [
@@ -80,19 +80,19 @@ const industryStories = [
       {
         title: 'How I got involved',
         paragraphs: [
-          'A PrePass representative recommended Netradyne to Woodfield’s safety manager after he had evaluated other vendors. I picked up that referral, learned where the existing system was failing, and brought the owner into the evaluation early.',
+          'A channel partner recommended Netradyne to the customer’s safety manager after he had evaluated other vendors. I picked up that referral, learned where the existing system was failing, and brought the owner into the evaluation early.',
         ],
       },
       {
         title: 'The situation',
         paragraphs: [
-          'Woodfield needed reliable video when incidents happened. Its Spireon cameras were missing important footage, and the fleet lacked the side visibility the safety team wanted. The owner was ready for a change, but his buying timeline was still the following year.',
+          'The customer wanted more reliable incident video and broader camera coverage than its existing Spireon system provided. The owner was ready for a change, but his buying timeline was still the following year.',
         ],
       },
       {
         title: 'My objective',
         paragraphs: [
-          'Prove the operational value, respect the company’s budget timing, and make the change practical for both its general freight and defense-related operations. A good camera demonstration alone would not resolve those buying constraints.',
+          'Prove the operational value, respect the company’s budget timing, and make the change practical across its operations. A good camera demonstration alone would not resolve those buying constraints.',
         ],
       },
       {
@@ -104,11 +104,11 @@ const industryStories = [
           },
           {
             title: 'Built support beyond the initial champion.',
-            text: 'I involved maintenance, fuel, accounting, and installation stakeholders as the evaluation progressed. We kept required systems in place for the defense business and worked through driver privacy and installation needs before the final review.',
+            text: 'I involved maintenance, fuel, accounting, and installation stakeholders as the evaluation progressed. We kept required existing systems in place and worked through driver privacy and installation needs before the final review.',
           },
           {
             title: 'Matched the financial plan to the customer.',
-            text: 'I built the business case with Woodfield’s mileage and fuel assumptions, identified insurance support for preapproval, and worked with our team on financing that deferred payments until after January 1. The proposed fuel savings remained an assumption for the buyer to evaluate.',
+            text: 'I built the business case with customer-provided mileage and fuel assumptions and worked with our team to align the purchase plan with budget timing after January 1. The proposed fuel savings remained an assumption for the buyer to evaluate.',
           },
         ],
       },
@@ -116,13 +116,13 @@ const industryStories = [
         title: 'The turning point',
         highlight: true,
         paragraphs: [
-          'At the November 2 review, the owner and his family could see both the trial evidence and a payment schedule that fit their plans. He concluded there was no need to wait until January. The business value and the budget timing finally aligned.',
+          'At the November 2 review, the owner could see both the trial evidence and a payment schedule that fit their plans. He concluded there was no need to wait until January. The business value and the budget timing finally aligned.',
         ],
       },
       {
         title: 'The result',
         paragraphs: [
-          'The deal closed on November 12, 2026, covering 116 vehicles and $103.3K in combined ARR. We structured two contracts for the two legal entities, as the owner requested. The cycle from the first opportunity was 101 days.',
+          'The deal closed on November 12, 2026, covering 116 vehicles and $103.3K in combined ARR. The agreement included two contracts covering two legal entities. The cycle from the first opportunity was 101 days.',
         ],
       },
       {
@@ -134,10 +134,10 @@ const industryStories = [
     ],
   },
   {
-    slug: 'kodiak-building-partners',
-    name: 'Kodiak Building Partners',
+    slug: 'building-products',
+    name: 'Building Products Distributor',
     headline: 'Keeping a growing buyer aligned through change.',
-    description: 'A CFO-led safety evaluation stayed on course through acquisitions, a new fleet leader, and legal review.',
+    description: 'A CFO-led safety evaluation stayed on course through business growth, a new fleet leader, and legal review.',
     metrics: [
       { label: 'ARR', value: '$110K' },
       { label: 'Vehicles', value: '270' },
@@ -147,13 +147,13 @@ const industryStories = [
       {
         title: 'How I got involved',
         paragraphs: [
-          'Kodiak’s CFO met Netradyne at a conference, and our insurance partnerships team introduced the opportunity to me. I worked with Kodiak’s Interiors Group and kept its insurance broker, Aon, involved from the first evaluation call.',
+          'The customer’s CFO met Netradyne at a conference, and our insurance partnerships team introduced the opportunity to me. I kept the customer’s insurance broker involved from the first evaluation call.',
         ],
       },
       {
         title: 'The situation',
         paragraphs: [
-          'Kodiak was growing through acquisitions and wanted a consistent fleet safety program before the business became harder to standardize. Its existing setup relied on basic vehicle tracking. Historical losses were relatively low, so the case had to address future operating needs as well as current costs.',
+          'The customer wanted a consistent fleet safety program to support business growth. Its existing setup relied on basic vehicle tracking. The case needed to address future operating needs as well as current costs.',
         ],
       },
       {
@@ -167,11 +167,11 @@ const industryStories = [
         items: [
           {
             title: 'Made the financial assumptions clear.',
-            text: 'I acknowledged that Kodiak’s own losses were low and that parts of the model used industry data. With the broker involved, we discussed the assumptions openly and equipped the CFO to take the business case to his board.',
+            text: 'I distinguished customer-provided inputs from industry assumptions in the model. With the broker involved, we discussed the assumptions openly and equipped the CFO to take the business case to his board.',
           },
           {
             title: 'Connected the proposal to the growth plan.',
-            text: 'I brought my director into discussions about pricing as vehicle counts grew and what would happen if ownership changed. We addressed the acquisition plan directly so the customer could assess how the agreement would fit a changing business.',
+            text: 'I brought my director into discussions about how the agreement would support a growing fleet. We addressed future operating needs so the customer could assess the fit as its business changed.',
           },
           {
             title: 'Reopened discovery when the buying team changed.',

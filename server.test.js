@@ -23,11 +23,13 @@ test('serves site assets and health without exposing repository files', async (t
     ...bundlePaths.map(path => [path, path.endsWith('.js') ? 'text/javascript' : 'text/css']),
     ['/fonts/Geist-Variable.woff2','font/woff2'], ['/family.jpg','image/jpeg'],
     ['/logo-samsara.png','image/png'], ['/logo-applied.png','image/png'], ['/logo-ezlynx.png','image/png'],
-    ['/DaveAlexanderResume.pdf','application/pdf'], ['/excelsior-ambulance.webp','image/webp'],
+    ['/DaveAlexanderResume.pdf','application/pdf'], ['/favicon-32.png','image/png'],
   ]) {
     const response = await fetch(origin + path);
     assert.equal(response.status, 200);
     assert.ok(response.headers.get('content-type').includes(type));
+    // Drain streamed assets so the server can finish each request and shut down.
+    await response.arrayBuffer();
   }
   assert.equal(await (await fetch(origin + '/health')).text(), 'ok');
   const head = await fetch(origin, { method: 'HEAD' });
@@ -42,9 +44,9 @@ test('serves site assets and health without exposing repository files', async (t
 test('serves distinct win and loss stories through direct URLs and route aliases', async (t) => {
   const assetDirectory = await mkdtemp(join(tmpdir(), 'dave-site-stories-'));
   const stories = [
-    ['deals/kenco', '<title>Win story fixture</title>'],
-    ['losses/kenco', '<title>Kenco loss story fixture</title>'],
-    ['losses/tcw', '<title>TCW loss story fixture</title>'],
+    ['deals/logistics-provider', '<title>Win story fixture</title>'],
+    ['losses/logistics-provider', '<title>Logistics provider loss story fixture</title>'],
+    ['losses/freight-carrier', '<title>Freight carrier loss story fixture</title>'],
   ];
   await writeFile(join(assetDirectory, 'index.html'), '<title>Home fixture</title>');
   for (const [route, html] of stories) {
@@ -68,11 +70,11 @@ test('serves distinct win and loss stories through direct URLs and route aliases
       assert.equal(await response.text(), html, route + suffix);
     }
   }
-  const head = await fetch(origin + '/losses/tcw', { method: 'HEAD' });
+  const head = await fetch(origin + '/losses/freight-carrier', { method: 'HEAD' });
   assert.equal(head.status, 200);
   assert.equal(head.headers.get('content-length'), String(Buffer.byteLength(stories[2][1])));
   assert.equal(await head.text(), '');
-  for (const route of ['/losses/missing/', '/deals/missing/', '/losses/', '/losses/tcw/extra']) {
+  for (const route of ['/losses/missing/', '/deals/missing/', '/losses/', '/losses/freight-carrier/extra']) {
     assert.equal((await fetch(origin + route)).status, 404, route);
   }
 });

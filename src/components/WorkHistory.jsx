@@ -9,7 +9,7 @@ const companies = [
     logoStyle: { width: 180, maxWidth: 'none', height: 36, objectFit: 'cover', mixBlendMode: 'lighten' },
     role: 'Enterprise Account Executive (Jan 2026 to Present)',
     takeaway:
-      'Closed $1.16M in ARR across seven net-new wins in 2026: 170% of first-year ramp quota and 91% of the full $1.27M annual quota. Averaged $165K ARR per win, including a $332K ARR competitive displacement across 657 vehicles. Built executive ROI cases and led buying teams through pilots, security reviews, procurement, and negotiations.',
+      'Closed $1.16M in ARR across seven net-new wins in 2026 to date: 170% of first-year ramp quota and 91% of the full $1.27M annual quota. Averaged $165K ARR per win, including a $332K ARR competitive displacement across 657 vehicles. Built executive ROI cases and led buying teams through pilots, security reviews, procurement, and negotiations.',
   },
   {
     name: 'Samsara',

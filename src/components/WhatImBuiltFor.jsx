@@ -7,22 +7,22 @@ const cards = [
   {
     title: 'Full-Cycle Revenue Ownership',
     body: 'I’m built for roles that require me to generate pipeline and carry opportunities through close. My experience spans self-sourced outbound, partner introductions, and taking ownership of stalled evaluations.',
-    proof: <>$4–5M in annual qualified pipeline at Samsara, approximately 55% self-sourced; revived and closed <a href="/deals/odom/" className={storyLinkClass}>Odom</a> at Netradyne.</>,
+    proof: <>$4–5M in annual qualified pipeline at Samsara, approximately 55% self-sourced; revived and closed the <a href="/deals/beverage-distributor/" className={storyLinkClass}>Beverage Distributor</a> account at Netradyne.</>,
   },
   {
     title: 'Competitive Enterprise Replacements',
     body: 'I’m comfortable selling into accounts with an established vendor and real switching costs. These deals require a compelling business case, support across the buying team, and a practical transition plan.',
-    proof: <>Three Samsara and Lytx displacements totaling $691K ARR at Netradyne: <a href="/deals/odom/" className={storyLinkClass}>Odom</a>, <a href="/deals/texas-transeastern/" className={storyLinkClass}>Texas TransEastern</a>, and <a href="/deals/bjs-logistics/" className={storyLinkClass}>BJ’s</a>.</>,
+    proof: <>Three Samsara and Lytx displacements totaling $691K ARR at Netradyne: <a href="/deals/beverage-distributor/" className={storyLinkClass}>Beverage Distributor</a>, <a href="/deals/fuel-transport/" className={storyLinkClass}>Fuel Transport Provider</a>, and <a href="/deals/retail-distribution/" className={storyLinkClass}>Retail Distribution Fleet</a>.</>,
   },
   {
     title: 'Operational Buyers and Executive Value',
     body: 'My experience is strongest with products that affect safety, productivity, visibility, and operating costs. I understand how to connect frontline requirements with an investment that leadership can justify.',
-    proof: <><a href="/deals/calfrac/" className={storyLinkClass}>Calfrac’s</a> business case built around customer accident data; <a href="/deals/odom/" className={storyLinkClass}>Odom’s</a> financial justification for a 657-vehicle replacement.</>,
+    proof: <><a href="/deals/oilfield-services/" className={storyLinkClass}>Oilfield Services Provider’s</a> business case built around customer accident data; <a href="/deals/beverage-distributor/" className={storyLinkClass}>Beverage Distributor’s</a> financial justification for a 657-vehicle replacement.</>,
   },
   {
     title: 'Leading Complex Deals Across Teams',
     body: 'I’m suited to opportunities that require coordination across sales engineering, partners, finance, legal, and implementation. I’ve worked through changing stakeholders, budget constraints, contract reviews, and rollout requirements to reach a decision.',
-    proof: <><a href="/deals/bjs-logistics/" className={storyLinkClass}>BJ’s</a> four-site rollout planning, <a href="/deals/miami-yellow-cab/" className={storyLinkClass}>Miami’s</a> payment structure, and <a href="/deals/kodiak-building-partners/" className={storyLinkClass}>Kodiak’s</a> changing buying team.</>,
+    proof: <><a href="/deals/retail-distribution/" className={storyLinkClass}>Retail Distribution Fleet’s</a> four-site rollout planning, <a href="/deals/taxi-operator/" className={storyLinkClass}>Taxi Fleet Operator’s</a> payment structure, and <a href="/deals/building-products/" className={storyLinkClass}>Building Products Distributor’s</a> changing buying team.</>,
   },
 ]
 

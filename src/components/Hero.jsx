@@ -37,7 +37,7 @@ export default function Hero() {
         >
           Eight-plus years in B2B SaaS. Currently an Enterprise Account Executive at Netradyne,
           where I've closed $1.16M in ARR across seven net-new wins. Previously at Samsara, I averaged
-          118% quota attainment across two fiscal years. The deals I close have one thing in
+          118% quota attainment across FY24 and FY25. The deals I close have one thing in
           common. I don't sell features. I sell what happens if nothing changes.
         </motion.p>
 

@@ -1,3 +1,4 @@
+import IndustryMark from './IndustryMark'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { FadeIn, SectionTitle } from './AnimatedSection'
@@ -19,6 +20,7 @@ function DealSection({ id, title, description, deals, className = 'py-24 md:py-2
         <FadeIn delay={0.05}>
           <p className="text-[16.5px] leading-[1.75] text-text-secondary max-w-[680px] mb-8">
             {description}
+            <span className="block mt-2 text-[14px] text-text-tertiary">Customer identities are anonymized. Deal figures are retained.</span>
           </p>
         </FadeIn>
 
@@ -65,19 +67,7 @@ function DealGrid({ deals }) {
               className={`bg-surface-1 border border-border rounded-xl p-5 h-full flex flex-col ${deal.href ? 'group hover:border-accent/60 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4 transition-colors' : ''}`}
             >
               <div className="h-[126px] rounded-lg bg-surface-2 border border-border-light flex items-center justify-center px-4 mb-5 overflow-hidden">
-                {deal.logo ? (
-                  <img
-                    src={deal.logo}
-                    alt={deal.logoAlt || `${deal.name} logo`}
-                    className={`w-auto object-contain ${deal.logoClass}`}
-                    style={{ maxWidth: '100%', ...deal.logoStyle }}
-                    loading="lazy"
-                  />
-                ) : (
-                  <span aria-hidden="true" className="font-heading text-[24px] font-semibold leading-tight tracking-[-0.02em] text-text-primary text-center">
-                    {deal.name}
-                  </span>
-                )}
+                <IndustryMark type={deal.icon} />
               </div>
               <h3 className="font-heading text-[17px] font-semibold text-text-primary tracking-[-0.01em] mb-1.5">
                 {deal.name}

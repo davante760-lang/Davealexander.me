@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react'
 // Replaces the prior full-width 9-link sticky bar. Links map to the
 // 1stInterviewsite sections that actually render (see src/App.jsx).
 const navLinks = [
+  { id: 'interview-guide', label: 'Interview guide' },
   { id: 'experience',     label: 'Experience' },
-  { id: 'how-i-sell',     label: 'How I sell' },
   { id: 'marquee-deals', label: 'Deals' },
   { id: 'losses', label: 'Losses' },
 ]
@@ -75,7 +75,7 @@ export default function StickyNav() {
             <button
               key={link.id}
               onClick={() => scrollTo(link.id)}
-              className="text-[15px] text-white/65 hover:text-white px-3 py-1.5 rounded-full transition-colors duration-200"
+              className="text-[15px] text-white/65 hover:text-white px-2.5 lg:px-3 py-1.5 rounded-full transition-colors duration-200"
             >
               {link.label}
             </button>

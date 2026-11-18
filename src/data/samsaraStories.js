@@ -1,7 +1,7 @@
 const samsaraStories = [
   {
-    slug: 'jde-concrete',
-    name: 'JDE Concrete',
+    slug: 'concrete-construction',
+    name: 'Concrete & Construction Company',
     headline: 'Turning an equipment-tracking conversation into a platform decision.',
     description: 'A self-sourced construction opportunity that connected operations, safety, finance, and the practical cost of switching.',
     metrics: [
@@ -12,13 +12,13 @@ const samsaraStories = [
       {
         title: 'How I got involved',
         paragraphs: [
-          'I called JDE’s director of operations with a specific reason to talk: new Samsara functionality for reading maintenance codes and tracking heavy equipment. JDE had a substantial equipment fleet, and I wanted to understand how they managed it. That opened a conversation about several disconnected systems.',
+          'I called the customer’s director of operations with a specific reason to talk: new Samsara functionality for reading maintenance codes and tracking heavy equipment. The company had a substantial equipment fleet, and I wanted to understand how they managed it. That opened a conversation about several disconnected systems.',
         ],
       },
       {
         title: 'The situation',
         paragraphs: [
-          'Equipment visibility was only part of the problem. Discovery surfaced fuel waste, safety incidents, and rising insurance costs. The safety team also described how their record affected eligibility to bid on work. Meanwhile, switching vendors would mean installation work, downtime, and an expensive incumbent contract buyout.',
+          'Equipment visibility was only part of the problem. Discovery expanded the discussion to fuel efficiency, safety, and operating costs. Meanwhile, switching vendors would mean installation work, downtime, and an expensive incumbent contract buyout.',
         ],
       },
       {
@@ -36,7 +36,7 @@ const samsaraStories = [
           },
           {
             title: 'Built a broader business case.',
-            text: 'I worked with our solution engineers on the proof of concept and tied the evaluation back to stakeholder priorities. Through our insurance partnerships team, I also identified a potential premium discount tied to sharing camera data with the carrier.',
+            text: 'I worked with our solution engineers on the proof of concept and tied the evaluation back to stakeholder priorities. I also involved our insurance partnerships team to assess potential support for the business case.',
           },
           {
             title: 'Kept projected value grounded.',
@@ -48,7 +48,7 @@ const samsaraStories = [
         title: 'The turning point',
         highlight: true,
         paragraphs: [
-          'The customer considered postponing the purchase because the incumbent buyout made switching too expensive. I investigated the contract with them and helped identify a service-response provision supported by their communication history. Resolving that obstacle removed a major cost barrier and brought the deal back within reach.',
+          'The customer considered postponing the purchase because the cost of leaving the incumbent made switching difficult. I worked with the customer and our internal team to review that obstacle. Resolving it made the transition financially practical.',
         ],
       },
       {
@@ -66,8 +66,8 @@ const samsaraStories = [
     ],
   },
   {
-    slug: 'excelsior-ambulance',
-    name: 'Excelsior Ambulance Service',
+    slug: 'emergency-services',
+    name: 'Emergency Medical Services Provider',
     headline: 'Connecting ambulance safety needs to an executive buying decision.',
     description: 'A self-sourced competitive displacement built around a clear safety problem, an operations champion, and early financial alignment.',
     metrics: [
@@ -78,19 +78,19 @@ const samsaraStories = [
       {
         title: 'How I got involved',
         paragraphs: [
-          'I prospected into Excelsior with a conversation about safety. Their incumbent contract was approaching renewal, which created an opening to evaluate alternatives. The director of operations became my champion and helped me understand why improving the safety program mattered to the business.',
+          'I prospected into this emergency medical services provider with a conversation about safety. Their incumbent contract was approaching renewal, which created an opening to evaluate alternatives. The director of operations became my champion and helped me understand why improving the safety program mattered to the business.',
         ],
       },
       {
         title: 'The situation',
         paragraphs: [
-          'Excelsior operated a 115-vehicle fleet using Motive. Accidents and settlement costs were a concern, and the wide rear bodies of their ambulances created blind spots. Our proposed package included multicamera technology and would increase spending substantially, so the decision needed support beyond operations.',
+          'The customer operated a 115-vehicle fleet using Motive and wanted to improve its safety program. Our proposed multicamera package required an executive business case and support beyond operations.',
         ],
       },
       {
         title: 'My objective',
         paragraphs: [
-          'Help the customer evaluate a stronger safety program and justify the investment to finance and leadership. I wanted the buying decision to reflect the specific accident risk we had uncovered, with clear expectations for the trial and a commercial decision date.',
+          'Help the customer evaluate a stronger safety program and justify the investment to finance and leadership. I wanted the buying decision to reflect the operating requirements we had uncovered, with clear expectations for the trial and a commercial decision date.',
         ],
       },
       {
@@ -105,8 +105,8 @@ const samsaraStories = [
             text: 'I involved operations, safety, fleet, finance, and IT. When IT raised patient-data concerns, I brought in a relevant ambulance customer reference to help address their questions.',
           },
           {
-            title: 'Connected the proposed solution to the accident pattern.',
-            text: 'During the evaluation, I explored why incidents happened and walked the team through driver coaching. The blind-spot problem gave multicamera technology a specific purpose, although that equipment was unavailable for trial and its benefits remained projected.',
+            title: 'Connected the proposed solution to the operating need.',
+            text: 'During the evaluation, I explored the customer’s visibility needs and walked the team through driver coaching. Those requirements gave multicamera technology a specific purpose, although that equipment was unavailable for trial and its benefits remained projected.',
           },
         ],
       },
@@ -114,13 +114,13 @@ const samsaraStories = [
         title: 'The turning point',
         highlight: true,
         paragraphs: [
-          'The CEO considered removing multicamera technology because of uncertainty about installation and performance. I returned to the settlement information the CFO had shared and framed the additional cost against their exposure. That helped the customer evaluate the full package against the problem they were trying to solve.',
+          'The CEO considered removing multicamera technology because of uncertainty about installation and performance. I returned to the financial priorities the CFO had shared and connected the proposed scope to the business case. That helped the customer evaluate the full package against the problem they were trying to solve.',
         ],
       },
       {
         title: 'The result',
         paragraphs: [
-          'I traveled to Atlanta for the executive summary, and we closed the competitive displacement with multicamera technology included. Early relationships across the buying group helped keep the decision moving when the scope came under pressure.',
+          'I met the customer in person for the executive summary, and we closed the competitive displacement with multicamera technology included. Early relationships across the buying group helped keep the decision moving when the scope came under pressure.',
         ],
       },
       {
@@ -132,8 +132,8 @@ const samsaraStories = [
     ],
   },
   {
-    slug: 'dietz-watson',
-    name: 'Dietz & Watson',
+    slug: 'food-manufacturer',
+    name: 'Food Manufacturer',
     headline: 'Using a technology change to open a broader safety conversation.',
     description: 'A self-sourced win that began with an integration gap and expanded through discovery.',
     metrics: [
@@ -144,7 +144,7 @@ const samsaraStories = [
       {
         title: 'How I got involved',
         paragraphs: [
-          'A professional connection told me Dietz & Watson was evaluating a new transportation management system. Knowing their incumbent system did not integrate, I prospected into the account with a specific reason to talk.',
+          'A professional connection told me this food manufacturer was evaluating a new transportation management system. Knowing their incumbent system did not integrate, I prospected into the account with a specific reason to talk.',
         ],
       },
       {

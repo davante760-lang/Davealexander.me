@@ -4,7 +4,7 @@ const rows = [
   { period: 'FY23 · ramp', company: 'Samsara', quota: '$900K annual quota', quarters: ['65%', '85%', '118%', '136%'], annual: '101%' },
   { period: 'FY24', company: 'Samsara', quota: '$900K annual quota', quarters: ['100%', '108%', '122%', '134%'], annual: '116%' },
   { period: 'FY25', company: 'Samsara', quota: '$900K annual quota', quarters: ['105%', '110%', '118%', '147%'], annual: '120%' },
-  { period: '2026', company: 'Netradyne', quota: '$1.27M annual quota', quarters: ['—', '52%', '105%', '208%'], annual: '91%' },
+  { period: '2026 · YTD', company: 'Netradyne', quota: '$1.27M annual quota', quarters: ['—', '52%', '105%', '208%'], annual: '91%', yearToDate: true },
 ]
 
 export default function QuarterlyAttainment() {
@@ -34,8 +34,16 @@ export default function QuarterlyAttainment() {
                         {row.company} <span className="text-text-tertiary">· {row.quota}</span>
                       </span>
                     </th>
-                    {row.quarters.map((value, index) => <td key={`${row.period}-${index}`} className="px-4 py-3.5 text-center text-text-secondary whitespace-nowrap">{value}</td>)}
-                    <td className="px-4 py-3.5 text-center font-semibold text-teal whitespace-nowrap">{row.annual}</td>
+                    {row.quarters.map((value, index) => (
+                      <td key={`${row.period}-${index}`} className="px-4 py-3.5 text-center text-text-secondary whitespace-nowrap">
+                        {value}
+                        {row.yearToDate && index === 3 && <span className="block text-[12px] mt-1 text-text-tertiary">QTD</span>}
+                      </td>
+                    ))}
+                    <td className="px-4 py-3.5 text-center font-semibold text-teal whitespace-nowrap">
+                      {row.annual}
+                      {row.yearToDate && <span className="block text-[12px] mt-1 font-normal text-text-tertiary">YTD</span>}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -43,7 +51,8 @@ export default function QuarterlyAttainment() {
           </div>
           <p className="text-[14px] text-text-tertiary leading-relaxed mt-3">
             Netradyne: 170% of first-year ramp quota. Full-quota figures reflect seven net-new wins:
-            $317,500 per calendar quarter and $1.27M annually, rounded. — = not reported.
+            $317,500 per calendar quarter and $1.27M annually, rounded. QTD = quarter to date;
+            YTD = year to date against the full annual quota. — = not reported.
           </p>
         </FadeIn>
       </div>

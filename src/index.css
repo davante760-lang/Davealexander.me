@@ -49,6 +49,9 @@ body {
 ::-webkit-scrollbar-track { background: var(--color-bg); }
 ::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
 
+.interview-answer summary::-webkit-details-marker { display: none; }
+#interview-guide, #sales-profile, #account-plan { scroll-margin-top: 104px; }
+
 /* Give deal figures room to breathe when larger type meets a narrow screen. */
 .deal-metrics {
   display: grid;

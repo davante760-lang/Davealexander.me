@@ -4,7 +4,8 @@ import Hero from './components/Hero'
 import NumbersBar from './components/NumbersBar'
 import QuarterlyAttainment from './components/QuarterlyAttainment'
 import WorkHistory from './components/WorkHistory'
-import WhatImBuiltFor from './components/WhatImBuiltFor'
+import SalesProfile from './components/SalesProfile'
+import InterviewGuide from './components/InterviewGuide'
 import HowIWork from './components/HowIWork'
 import MarqueeDeals from './components/MarqueeDeals'
 import Losses from './components/Losses'
@@ -42,11 +43,12 @@ export default function App() {
     <>
       <StickyNav />
       <Hero />
+      <InterviewGuide />
       <NumbersBar />
       <QuarterlyAttainment />
       <SectionDivider />
       <WorkHistory />
-      <WhatImBuiltFor />
+      <SalesProfile />
       <HowIWork />
       <MarqueeDeals />
       <Losses />
