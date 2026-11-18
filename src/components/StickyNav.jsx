@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 // Replaces the prior full-width 9-link sticky bar. Links map to the
 // 1stInterviewsite sections that actually render (see src/App.jsx).
 const navLinks = [
-  { id: 'interview-guide', label: 'Interview guide' },
+  { id: 'interview-guide', label: 'How I work' },
   { id: 'experience',     label: 'Experience' },
   { id: 'marquee-deals', label: 'Deals' },
   { id: 'losses', label: 'Losses' },

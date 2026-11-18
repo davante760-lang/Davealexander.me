@@ -59,7 +59,7 @@ export default function FoodAccountPlan() {
           <p className="mt-1 text-[16px] leading-[1.7] text-text-secondary">Use a buying signal to earn the meeting. Use discovery to find the people and problems that expand the opportunity.</p>
         </div>
 
-        <a href="/#interview-guide-territory" className="mt-6 inline-flex items-center gap-2 rounded-sm text-[15px] font-medium text-accent-hover transition-colors hover:text-text-primary focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4"><span aria-hidden="true">←</span> Back to the interview guide</a>
+        <a href="/#interview-guide-territory" className="mt-6 inline-flex items-center gap-2 rounded-sm text-[15px] font-medium text-accent-hover transition-colors hover:text-text-primary focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4"><span aria-hidden="true">←</span> Back to how I work</a>
       </div>
     </section>
   )
